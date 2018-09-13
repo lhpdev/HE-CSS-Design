@@ -99,10 +99,12 @@ terminalIcon.addEventListener("click", function() {
     terminalIcon_clicked = !terminalIcon_clicked;
     if (terminalIcon_clicked) {
         terminalIcon.style.background = terminalIcon_active_path;
-        terminalIcon.style.backgroundSize = "100%";
+        terminalIcon.style.width = "3rem";
+        terminalIcon.style.height = "3rem";
     }else {
         terminalIcon.style.background = terminalIcon_inactive_path;
-        terminalIcon.style.backgroundSize = "100%";
+        terminalIcon.style.width = "3rem";
+        terminalIcon.style.height = "3rem";
     }
 });
 

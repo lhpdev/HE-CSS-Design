@@ -441,8 +441,17 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.conky-menu__memory__graph {
+    height: 4.5rem;
+}
+
+.conky-menu__memory__table {
+    justify-self: center;
+}
+
 .conky__item table {
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .conky-bottom-border {
