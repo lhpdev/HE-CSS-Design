@@ -41,7 +41,7 @@
         <div class="left-panel__second_half left-panel">
           <div class="left-panel__second_half_left">
               <div class="left-panel__second_half_left_top">
-                  <div id="left-panel-clock" onload="startTime()"></div>
+                  <div id="left-panel-clock"><script>startTime();</script></div>
               </div>
               <div class="left-panel__second_half_left_bottom"></div>
           </div>
@@ -192,8 +192,48 @@
       </div>
       <div class="conky__bottom-border"></div>
     </div>
-    <div class="application-view-section">
+
+
+    <div class="application-view-container">
+      <div class="application-view__left-border"></div>
+      <div class="application-view__content">
+        <div class="application-view__top-bar">
+          <div class="application-view__top-bar__left">
+              <span class="logviewer-icon"></span>
+              <p id="logviewer__active-ip">127.0.0.1</p>
+              <p>Log Viewer</p>
+          </div>
+          <div class="application-view__top-bar__right">
+            <button class="application-view__minimize-button">-</button>
+            <button class="application-view__close-button">X</button>
+          </div>
+        </div>
+
+        
+        <div class="application-view__filter-options">
+          <div class="application-view__filter-options__content">
+              <span class="pencil-filter-icon"></span>
+              <span class="hand-filter-icon"></span>
+              <span class="calendar-filter-icon"></span>
+              <span class="deep-filter-icon"></span>
+              <input type="text" name="search-bar" placeholder="Search">
+          </div>
+          <div class="application-view__filter-options__gap">
+          </div>
+        </div>
+        <div class="application-view__scrow-view-box">
+            <iframe id="application-view-log-viewer-frame" src="../LogViewer/index.html" width="550" height="280">Text</iframe>
+        </div>
+        <div class="application-view__bottom_options">
+          <button>
+            +
+          </button>
+        </div>
+      </div>
+      <div class="application-view__right-border"></div>
     </div>
+
+
     <div class="bottom-menu-section">
       <div class="bottom-menu__left-border"></div>
       <div class="bottom-menu__content">
