@@ -11,6 +11,9 @@ var connectionLeft = document.querySelector(".header-connection-left");
 var connectionRight = document.querySelector(".header-connection-right")
 var notificationsPool = document.querySelector(".notification__pool-container");
 var document = document.querySelector('.main-screen');
+var logViewerApplication = document.querySelector('.application-view-container');
+var logViewerApplicationCloseButton = document.querySelector('.application-view__close-button');
+
 var path_pc_not_clicked = "url('./header/header-center/pc-icon.png')";
 var path_pc_clicked = "url('./header/header-center/pc-icon-active.png')";
 
@@ -25,8 +28,10 @@ var server_clicked = false;
 var terminalIcon_clicked = false;
 var notificationsIcon_clicked = false;
 var notificationPoolOpen = false;
+var logViewerApplicationOpen = false;
 
 notificationsPool.style.visibility = 'hidden';
+logViewerApplication.style.visibility = 'hidden';
 
 var current_date = Date();
 
@@ -110,12 +115,22 @@ terminalIconOne.addEventListener("click", function() {
         terminalIconOne.style.background = terminalIcon_active_path;
         terminalIconOne.style.width = "3rem";
         terminalIconOne.style.height = "3rem";
+        logViewerApplication.style.visibility = "visible";
+        logViewerApplicationOpen = true;
     }else {
         terminalIconOne.style.background = terminalIcon_inactive_path;
         terminalIconOne.style.width = "3rem";
         terminalIconOne.style.height = "3rem";
+        logViewerApplication.style.visibility = "hidden";
+        logViewerApplicationOpen = false;
     }
 });
+
+logViewerApplicationCloseButton.addEventListener("click", function() {
+    logViewerApplicationOpen = !logViewerApplicationOpen;
+    logViewerApplication.style.visibility = "hidden";
+    terminalIconOne.style.background = terminalIcon_inactive_path;
+})
 
 terminalIconOne.addEventListener("mouseover", function() {
     terminalIconOne.style.opacity = 0.7;
@@ -228,4 +243,3 @@ notificationsGlobalIcon.addEventListener("click", function() {
         notificationsPool.style.visibility = 'hidden';
     }
 });
-

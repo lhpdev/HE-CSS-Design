@@ -355,7 +355,7 @@ body {
 }
 
 .notification__pool-container {
-    position: fixed;
+    position: absolute;
     z-index: 10;
     height: 13rem;
     width: 15rem;
@@ -636,6 +636,7 @@ body {
     position: fixed;
     left: 20rem;
     top: 15rem;
+    visibility: visible;
 }
 
 .application-view__left-border {
@@ -682,13 +683,14 @@ body {
 }
 
 .application-view__top-bar__right button {
-    background-color: rgba(55, 242, 255, 0.1);
+    background-color: rgba(55, 242, 255, 0.2);
     border: none;
     text-align: center;
     height: 1rem;
     margin-right: 5px;
     vertical-align: middle;
     color: orange;
+    font-weight: bold;
 }
 
 .application-view__top-bar__right button:hover {
@@ -711,9 +713,6 @@ body {
     padding-left: 5px;
 }
 
-
-
-
 .logviewer-icon {
     background: url('./logviewer/logviewer-icon.png');
     width: 1.7rem;
@@ -735,12 +734,12 @@ left: 4.5rem; */
 
 
 .application-view__filter-options {
-    background: red;
+    background-color: rgba(55, 242, 255, 0.1);
     height: 2.8rem;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -748,30 +747,110 @@ left: 4.5rem; */
     height: 1.8rem;
     width: 100%;
     display: flex;
+    padding-right: 1rem;
     justify-content: flex-end;
     align-items: center;
+}
+
+.application-view__filter-options__content__icons {
+    height: 1.8rem;
+    width: 15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.application-view__filter-options__content input {
+    background: rgba(137, 173, 175, 0.8);
+    width: 6rem;
+    height: 1.3rem;
+    color: white;
+    border: none;
+    text-justify: middle;
+    text-align: center;
+}
+
+.pencil-filter-icon {
+    opacity: 0.7;
+    background: url('./logviewer/pencil-filter-icon.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.hand-filter-icon {
+    opacity: 0.9;
+    background: url('./logviewer/hand-filter-icon.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.calendar-filter-icon {
+    opacity: 0.9;
+    background: url('./logviewer/calendar-filter-icon.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.deep-filter-icon {
+    opacity: 0.9;
+    background: url('./logviewer/deep-filter-icon.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.deep-filter-icon:hover,
+.calendar-filter-icon:hover,
+.hand-filter-icon:hover,
+.pencil-filter-icon:hover {
+    background-color: rgba(55, 242, 255, 0.1);
+}
+
+.deep-filter-icon:active,
+.calendar-filter-icon:active,
+.hand-filter-icon:active,
+.pencil-filter-icon:active {
+    background-color: rgba(55, 242, 255, 0.2);
 }
 
 .application-view__filter-options__gap {
     height: 1rem;
     width: 100%;
+    display: flex;
 }
 
+.application__trace {
+    background: url('./logviewer/trace.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-left: 5px;
+    margin-top: 3px;
+    width: 34rem;
+    height: 1rem;
+    padding-top: 0; 
+}
 
 .application-view__scrow-view-box {
+    opacity: 0.8;
     height: 18rem;
     width: 100%;
     background: white;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .application-view__bottom_options {
     height: 2.8rem;
     width: 100%;
-    background: red;
+    background-color: rgba(55, 242, 255, 0.1);
     display: flex;
     justify-content: left;
     align-items: center;
@@ -779,6 +858,20 @@ left: 4.5rem; */
 
 .application-view__bottom_options button {
     margin-left: 1rem;
+    color: orange;
+    background-color: rgba(55, 242, 255, 0.2);
+    font-size: 17pt;
+    width: 3rem;
+    border: none;
+    padding: 0;
+}
+
+.application-view__bottom_options button:hover {
+    background-color: rgba(55, 242, 255, 0.4); 
+}
+
+.application-view__bottom_options button:active {
+    background-color: rgba(55, 242, 255, 0.5); 
 }
 
 .application-view__right-border {
