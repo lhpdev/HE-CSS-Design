@@ -14,14 +14,14 @@ var document = document.querySelector('.main-screen');
 var logViewerApplication = document.querySelector('.application-view-container');
 var logViewerApplicationCloseButton = document.querySelector('.application-view__close-button');
 
-var path_pc_not_clicked = "url('./header/header-center/pc-icon.png')";
-var path_pc_clicked = "url('./header/header-center/pc-icon-active.png')";
+var path_pc_not_clicked = "url('./public/images/header/header-center/pc-icon.png')";
+var path_pc_clicked = "url('./public/images/header/header-center/pc-icon-active.png')";
 
-var connection_active_path = "url('./header/header-center/connection-active.png')";
-var connection_inactive_path = "url('./header/header-center/connection.png')";
+var connection_active_path = "url('./public/images/header/header-center/connection-active.png')";
+var connection_inactive_path = "url('./public/images/header/header-center/connection.png')";
 
-var terminalIcon_active_path = "url('./bottom-menu/terminal-icon-active.png')";
-var terminalIcon_inactive_path = "url('./bottom-menu/terminal-icon.png')";
+var terminalIcon_active_path = "url('./public/images/bottom-menu/terminal-icon-active.png')";
+var terminalIcon_inactive_path = "url('./public/images/bottom-menu/terminal-icon.png')";
 
 var gateway_clicked = false;
 var server_clicked = false;

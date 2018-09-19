@@ -1,13 +1,12 @@
 body {
     width: 95rem;
-    /*height: 80rem;*/
     font-family: 'Signika', sans-serif;
 }
 
 .main-screen {
     margin: 2rem;
     height: auto;
-    background-image: url('background.png');
+    background-image: url('./public/images/background.png');
     background-size: 95rem;
     background-repeat: no-repeat;
     color: black;
@@ -714,24 +713,12 @@ body {
 }
 
 .logviewer-icon {
-    background: url('./logviewer/logviewer-icon.png');
+    background: url('./public/images/logviewer/logviewer-icon.png');
     width: 1.7rem;
     height: 1.7rem;
     background-repeat: no-repeat;
     background-size: 90%;
 }
-
-
-/* width: 3.5rem;
-height: 3.5rem;
-background: url('./header/left-toolbar/HE-icon.png');
-background-repeat: no-repeat;
-background-size: 80%;
-display: block;
-position: absolute;
-top: 2.8rem;
-left: 4.5rem; */
-
 
 .application-view__filter-options {
     background-color: rgba(55, 242, 255, 0.1);
@@ -772,7 +759,7 @@ left: 4.5rem; */
 
 .pencil-filter-icon {
     opacity: 0.7;
-    background: url('./logviewer/pencil-filter-icon.png');
+    background: url('./public/images/logviewer/pencil-filter-icon.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1.5rem;
@@ -781,7 +768,7 @@ left: 4.5rem; */
 
 .hand-filter-icon {
     opacity: 0.9;
-    background: url('./logviewer/hand-filter-icon.png');
+    background: url('./public/images/logviewer/hand-filter-icon.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1.8rem;
@@ -790,7 +777,7 @@ left: 4.5rem; */
 
 .calendar-filter-icon {
     opacity: 0.9;
-    background: url('./logviewer/calendar-filter-icon.png');
+    background: url('./public/images/logviewer/calendar-filter-icon.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1.7rem;
@@ -799,7 +786,7 @@ left: 4.5rem; */
 
 .deep-filter-icon {
     opacity: 0.9;
-    background: url('./logviewer/deep-filter-icon.png');
+    background: url('./public/images/logviewer/deep-filter-icon.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1.6rem;
@@ -827,7 +814,7 @@ left: 4.5rem; */
 }
 
 .application__trace {
-    background: url('./logviewer/trace.png');
+    background: url('./public/images/logviewer/trace.png');
     background-repeat: no-repeat;
     background-size: 100%;
     padding-left: 5px;
@@ -889,19 +876,19 @@ left: 4.5rem; */
     opacity: 0.7;
     width: 3rem;
     height: 3rem;
-    background: url('./bottom-menu/terminal-icon.png');
+    background: url('./public/images/bottom-menu/terminal-icon.png');
     background-repeat: no-repeat;
 }
 
 .terminal-icon:hover {
-    background: url('./bottom-menu/terminal-icon-hover.png');
+    background: url('./public/images/bottom-menu/terminal-icon-hover.png');
     opacity: 0.5;
 }
 
 .HE-icon {
     width: 3.5rem;
     height: 3.5rem;
-    background: url('./header/left-toolbar/HE-icon.png');
+    background: url('./public/images//header/left-toolbar/HE-icon.png');
     background-repeat: no-repeat;
     background-size: 80%;
     display: block;
@@ -913,7 +900,7 @@ left: 4.5rem; */
 .conky-memory-graph {
     width: 5rem;
     height: 5rem;
-    background: url('./conky-sidebar/graph.png');
+    background: url('./public/images/conky-sidebar/graph.png');
     background-repeat: no-repeat;
     background-size: 100%;
     display: block;
@@ -929,7 +916,7 @@ left: 4.5rem; */
 
 .notification-user {
     opacity: 0.7;
-    background: url('./header/right-toolbar/notification-user.png');
+    background: url('./public/images/header/right-toolbar/notification-user.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1.5rem;
@@ -938,7 +925,7 @@ left: 4.5rem; */
 
 .notification-message {
     opacity: 0.7;
-    background: url('./header/right-toolbar/notification-message.png');
+    background: url('./public/images/header/right-toolbar/notification-message.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1.5rem;
@@ -947,7 +934,7 @@ left: 4.5rem; */
 
 .notification-main {
     opacity: 0.7;
-    background: url('./header/right-toolbar/notification-main.png');
+    background: url('./public/images/header/right-toolbar/notification-main.png');
     background-repeat: no-repeat;
     background-size: 90%;
     width: 1.5rem;
@@ -961,7 +948,7 @@ left: 4.5rem; */
 }
 
 .user-profile-icon {
-    background: url('./header/right-toolbar/user-profile-icon.png');
+    background: url('./public/images/header/right-toolbar/user-profile-icon.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1.3rem;
@@ -970,7 +957,7 @@ left: 4.5rem; */
 
 .header-gateway {
     opacity: 0.7;
-    background: url('./header/header-center/pc-icon.png');
+    background: url('./public/images/header/header-center/pc-icon.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 3.5rem;
@@ -979,7 +966,7 @@ left: 4.5rem; */
 
 .header-connection-left {
     opacity: 0.7;
-    background: url('./header/header-center/connection.png');
+    background: url('./public/images/header/header-center/connection.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 13rem;
@@ -988,7 +975,7 @@ left: 4.5rem; */
 
 .header-bouncing {
     opacity: 0.7;
-    background: url('./header/header-center/pc-icon.png');
+    background: url('./public/images/header/header-center/pc-icon.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 2rem;
@@ -997,7 +984,7 @@ left: 4.5rem; */
 
 .header-connection-right {
     opacity: 0.7;
-    background: url('./header/header-center/connection.png');
+    background: url('./public/images/header/header-center/connection.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 13rem;
@@ -1008,7 +995,7 @@ left: 4.5rem; */
 
 .header-server {
     opacity: 0.7;
-    background: url('./header/header-center/pc-icon.png');
+    background: url('./public/images/header/header-center/pc-icon.png');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 3.5rem;
