@@ -358,7 +358,7 @@ body {
     z-index: 10;
     height: 13rem;
     width: 15rem;
-    right: 32.5rem;
+    right: 47rem;
     top: 3.7rem;
     visibility: visible;
     display: flex;
@@ -1017,4 +1017,22 @@ body {
     margin-top: 4px;
 }
 
+#logviewer {
+    position: absolute;
+    z-index: 9;
+}
 
+#logviewerheader {
+    cursor: move;
+    z-index: 10;
+}
+
+#notifications {
+    position: absolute;
+    z-index: 9;
+}
+
+#notificationsheader {
+    cursor: move;
+    z-index: 10;
+}
