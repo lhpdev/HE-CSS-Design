@@ -1,19 +1,17 @@
 body {
-    width: 95rem;
+    min-width: 85rem;
     font-family: 'Signika', sans-serif;
 }
 
 .main-screen {
-    margin: 2rem;
-    height: auto;
+    height: 100vh;
     background-image: url('./public/images/background.png');
-    background-size: 95rem;
+    /* background-size: 95rem; */
     background-repeat: no-repeat;
     color: black;
     display: grid;
     grid-template-columns: 20% 30% 30% 20%;
-    grid-template-rows: [row-1-start] 10rem [row-1-end row-2-start] 34rem [row-2-end row-3-start] 8rem [row-3-end];
-
+    grid-template-rows: [row-1-start] 10rem [row-1-end row-2-start] 1fr [row-2-end row-3-start] 8rem [row-3-end];
 }
 
 .left-panel-section {
@@ -465,6 +463,9 @@ body {
 /* Conky CSS Start */
 .conky-section {
     margin: 10px;
+    width: 284px;
+    height: 524px;
+    align-self: center;
     background: rgba(55, 242, 255, 0.2);
     grid-row-start: 2;
     grid-row-end: 3;
@@ -886,15 +887,13 @@ body {
 }
 
 .HE-icon {
-    width: 3.5rem;
-    height: 3.5rem;
+    margin-top: 0.7rem;
+    width: 2.8rem;
+    height: 2.8rem;
     background: url('./public/images//header/left-toolbar/HE-icon.png');
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 100%;
     display: block;
-    position: absolute;
-    top: 2.8rem;
-    left: 4.5rem;
 }
 
 .conky-memory-graph {
@@ -1017,4 +1016,22 @@ body {
     margin-top: 4px;
 }
 
+#logviewer {
+    position: absolute;
+    z-index: 9;
+}
 
+#logviewerheader {
+    cursor: move;
+    z-index: 10;
+}
+
+#notifications {
+    position: absolute;
+    z-index: 9;
+}
+
+#notificationsheader {
+    cursor: move;
+    z-index: 10;
+}
