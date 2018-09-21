@@ -8,21 +8,6 @@
     <title>Hacker Experience</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
-    <script>
-      function startTime() {
-          var today = new Date();
-          var h = today.getHours();
-          var m = today.getMinutes();
-          m = checkTime(m);
-          document.getElementById('left-panel-clock').innerHTML =
-          h + ":" + m;
-          var t = setTimeout(startTime, 500);
-      }
-      function checkTime(i) {
-          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-          return i;
-      }
-    </script>
 </head>
 
 <body>
@@ -41,7 +26,7 @@
         <div class="left-panel__second_half left-panel">
           <div class="left-panel__second_half_left">
               <div class="left-panel__second_half_left_top">
-                  <div id="left-panel-clock"><script>startTime();</script></div>
+                  <div id="left-panel-clock"></div>
               </div>
               <div class="left-panel__second_half_left_bottom"></div>
           </div>
@@ -192,8 +177,6 @@
       </div>
       <div class="conky__bottom-border"></div>
     </div>
-
-
     <div class="application-view-container" id="logviewer">
       <div class="application-view__left-border"></div>
       <div class="application-view__content">
@@ -208,8 +191,6 @@
             <button class="application-view__close-button">X</button>
           </div>
         </div>
-
-        
         <div class="application-view__filter-options">
           <div class="application-view__filter-options__gap">
               <span class="application__trace"></span>
@@ -238,8 +219,6 @@
       </div>
       <div class="application-view__right-border"></div>
     </div>
-
-
     <div class="bottom-menu-section">
       <div class="bottom-menu__left-border"></div>
       <div class="bottom-menu__content">

@@ -17,15 +17,27 @@ body {
 ::-webkit-scrollbar-track {
     background: rgba(9, 164, 175, 0.918);
 }
+
+::-webkit-scrollbar-track:hover {
+    background: rgba(4, 116, 124, 0.918);
+
+}
     
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(250, 170, 21)
+    background: rgb(250, 170, 21);
+    cursor: context-menu;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(160, 104, 1)
+    background: rgb(160, 104, 1);
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgb(119, 78, 2);
+    cursor: pointer;
 }
 
 .logviewer-container__content {
