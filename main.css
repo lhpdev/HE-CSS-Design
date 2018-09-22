@@ -114,6 +114,9 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: [column-1-start] 1fr [column-1-end column-2-start] 1.05rem [column-2-end column-3-start] 1.05rem [column-3-end];
 }
+.left-panel__second_half_right:hover {
+  cursor: pointer;
+}
 
 .left-panel__second_half_right_row_1 {
   background: rgba(55, 242, 255, 0.2);
@@ -269,6 +272,9 @@ body {
 }
 .right-panel__second_half_right p {
   color: white;
+}
+.right-panel__second_half_right:hover {
+  cursor: pointer;
 }
 
 .right-panel__right-border {
@@ -633,15 +639,6 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-
-.application-view__filter-options__content__icons {
-  height: 1.8rem;
-  width: 15rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .application-view__filter-options__content input {
   background: rgba(137, 173, 175, 0.8);
   width: 6rem;
@@ -652,9 +649,17 @@ body {
   text-align: center;
 }
 
+.application-view__filter-options__content__icons {
+  height: 1.8rem;
+  width: 15rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .pencil-filter-icon {
-  opacity: 0.7;
   background: url("./public/images/logviewer/pencil-filter-icon.png");
+  opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 1.5rem;
@@ -662,8 +667,8 @@ body {
 }
 
 .hand-filter-icon {
-  opacity: 0.9;
   background: url("./public/images/logviewer/hand-filter-icon.png");
+  opacity: 0.9;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 1.8rem;
@@ -671,8 +676,8 @@ body {
 }
 
 .calendar-filter-icon {
-  opacity: 0.9;
   background: url("./public/images/logviewer/calendar-filter-icon.png");
+  opacity: 0.9;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 1.7rem;
@@ -680,8 +685,8 @@ body {
 }
 
 .deep-filter-icon {
-  opacity: 0.9;
   background: url("./public/images/logviewer/deep-filter-icon.png");
+  opacity: 0.9;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 1.6rem;
@@ -693,6 +698,7 @@ body {
 .hand-filter-icon:hover,
 .pencil-filter-icon:hover {
   background-color: rgba(55, 242, 255, 0.1);
+  cursor: pointer;
 }
 
 .deep-filter-icon:active,
@@ -748,6 +754,7 @@ body {
 }
 .application-view__bottom_options button:hover {
   background-color: rgba(55, 242, 255, 0.4);
+  cursor: pointer;
 }
 .application-view__bottom_options button:active {
   background-color: rgba(55, 242, 255, 0.6);
@@ -771,10 +778,10 @@ body {
   background: url("./public/images/bottom-menu/terminal-icon.png");
   background-repeat: no-repeat;
 }
-
 .terminal-icon:hover {
   background: url("./public/images/bottom-menu/terminal-icon-hover.png");
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .HE-icon {
@@ -805,8 +812,8 @@ body {
 }
 
 .notification-user {
-  opacity: 0.7;
   background: url("./public/images/header/right-toolbar/notification-user.png");
+  opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 1.5rem;
@@ -814,8 +821,8 @@ body {
 }
 
 .notification-message {
-  opacity: 0.7;
   background: url("./public/images/header/right-toolbar/notification-message.png");
+  opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 1.5rem;
@@ -823,8 +830,8 @@ body {
 }
 
 .notification-main {
-  opacity: 0.7;
   background: url("./public/images/header/right-toolbar/notification-main.png");
+  opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 90%;
   width: 1.5rem;
@@ -835,6 +842,7 @@ body {
 .notification-message:hover,
 .notification-user:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .user-profile-icon {
@@ -846,17 +854,20 @@ body {
 }
 
 .header-gateway {
-  opacity: 0.7;
   background: url("./public/images/header/header-center/pc-icon.png");
+  opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 3.5rem;
   height: 3.5rem;
 }
+.header-gateway:hover {
+  cursor: pointer;
+}
 
 .header-connection-left {
-  opacity: 0.7;
   background: url("./public/images/header/header-center/connection.png");
+  opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 13rem;
@@ -864,8 +875,8 @@ body {
 }
 
 .header-bouncing {
-  opacity: 0.7;
   background: url("./public/images/header/header-center/pc-icon.png");
+  opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 2rem;
@@ -873,8 +884,8 @@ body {
 }
 
 .header-connection-right {
-  opacity: 0.7;
   background: url("./public/images/header/header-center/connection.png");
+  opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 13rem;
@@ -884,12 +895,15 @@ body {
 }
 
 .header-server {
-  opacity: 0.7;
   background: url("./public/images/header/header-center/pc-icon.png");
+  opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
   width: 3.5rem;
   height: 3.5rem;
+}
+.header-server:hover {
+  cursor: pointer;
 }
 
 .header-connection-left:hover,
@@ -905,6 +919,9 @@ body {
   font-size: 9pt;
   margin: 0;
   margin-top: 4px;
+}
+#left-panel-clock:hover {
+  cursor: pointer;
 }
 
 #logviewer {
