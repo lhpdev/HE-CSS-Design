@@ -129,12 +129,14 @@ terminalIconOne.addEventListener("click", function() {
     terminalIcon_clicked = !terminalIcon_clicked;
     if (terminalIcon_clicked) {
         terminalIconOne.style.background = terminalIcon_active_path;
+        terminalIconOne.style.backgroundRepeat = "no-repeat";
         terminalIconOne.style.width = "3rem";
         terminalIconOne.style.height = "3rem";
         logViewerApplication.style.visibility = "visible";
         logViewerApplicationOpen = true;
     }else {
         terminalIconOne.style.background = terminalIcon_inactive_path;
+        terminalIconOne.style.backgroundRepeat = "no-repeat";
         terminalIconOne.style.width = "3rem";
         terminalIconOne.style.height = "3rem";
         logViewerApplication.style.visibility = "hidden";
@@ -146,10 +148,11 @@ logViewerApplicationCloseButton.addEventListener("click", function() {
     logViewerApplicationOpen = !logViewerApplicationOpen;
     logViewerApplication.style.visibility = "hidden";
     terminalIconOne.style.background = terminalIcon_inactive_path;
+    terminalIconOne.style.backgroundRepeat = "no-repeat";
 })
 
 terminalIconOne.addEventListener("mouseover", function() {
-    terminalIconOne.style.opacity = 0.7;
+    terminalIconOne.style.opacity = 0.9;
 });
 
 terminalIconOne.addEventListener("mouseout", function() {
@@ -158,97 +161,97 @@ terminalIconOne.addEventListener("mouseout", function() {
     }
 });
 
-terminalIconTwo.addEventListener("click", function() {
-    terminalIcon_clicked = !terminalIcon_clicked;
-    if (terminalIcon_clicked) {
-        terminalIconTwo.style.background = terminalIcon_active_path;
-        terminalIconTwo.style.width = "3rem";
-        terminalIconTwo.style.height = "3rem";
-    }else {
-        terminalIconTwo.style.background = terminalIcon_inactive_path;
-        terminalIconTwo.style.width = "3rem";
-        terminalIconTwo.style.height = "3rem";
-    }
-});
+// terminalIconTwo.addEventListener("click", function() {
+//     terminalIcon_clicked = !terminalIcon_clicked;
+//     if (terminalIcon_clicked) {
+//         terminalIconTwo.style.background = terminalIcon_active_path;
+//         terminalIconTwo.style.width = "3rem";
+//         terminalIconTwo.style.height = "3rem";
+//     }else {
+//         terminalIconTwo.style.background = terminalIcon_inactive_path;
+//         terminalIconTwo.style.width = "3rem";
+//         terminalIconTwo.style.height = "3rem";
+//     }
+// });
 
-terminalIconTwo.addEventListener("mouseover", function() {
-    terminalIconTwo.style.opacity = 0.7;
-});
+// terminalIconTwo.addEventListener("mouseover", function() {
+//     terminalIconTwo.style.opacity = 0.7;
+// });
 
-terminalIconTwo.addEventListener("mouseout", function() {
-    if (!terminalIcon_clicked) {
-        terminalIconTwo.style.opacity = 0.7;
-    }
-});
+// terminalIconTwo.addEventListener("mouseout", function() {
+//     if (!terminalIcon_clicked) {
+//         terminalIconTwo.style.opacity = 0.7;
+//     }
+// });
 
-terminalIconThree.addEventListener("click", function() {
-    terminalIcon_clicked = !terminalIcon_clicked;
-    if (terminalIcon_clicked) {
-        terminalIconThree.style.background = terminalIcon_active_path;
-        terminalIconThree.style.width = "3rem";
-        terminalIconThree.style.height = "3rem";
-    }else {
-        terminalIconThree.style.background = terminalIcon_inactive_path;
-        terminalIconThree.style.width = "3rem";
-        terminalIconThree.style.height = "3rem";
-    }
-});
+// terminalIconThree.addEventListener("click", function() {
+//     terminalIcon_clicked = !terminalIcon_clicked;
+//     if (terminalIcon_clicked) {
+//         terminalIconThree.style.background = terminalIcon_active_path;
+//         terminalIconThree.style.width = "3rem";
+//         terminalIconThree.style.height = "3rem";
+//     }else {
+//         terminalIconThree.style.background = terminalIcon_inactive_path;
+//         terminalIconThree.style.width = "3rem";
+//         terminalIconThree.style.height = "3rem";
+//     }
+// });
 
-terminalIconThree.addEventListener("mouseover", function() {
-    terminalIconThree.style.opacity = 0.7;
-});
+// terminalIconThree.addEventListener("mouseover", function() {
+//     terminalIconThree.style.opacity = 0.7;
+// });
 
-terminalIconThree.addEventListener("mouseout", function() {
-    if (!terminalIcon_clicked) {
-        terminalIconThree.style.opacity = 0.7;
-    }
-});
+// terminalIconThree.addEventListener("mouseout", function() {
+//     if (!terminalIcon_clicked) {
+//         terminalIconThree.style.opacity = 0.7;
+//     }
+// });
 
-terminalIconFour.addEventListener("click", function() {
-    terminalIcon_clicked = !terminalIcon_clicked;
-    if (terminalIcon_clicked) {
-        terminalIconFour.style.background = terminalIcon_active_path;
-        terminalIconFour.style.width = "3rem";
-        terminalIconFour.style.height = "3rem";
-    }else {
-        terminalIconFour.style.background = terminalIcon_inactive_path;
-        terminalIconFour.style.width = "3rem";
-        terminalIconFour.style.height = "3rem";
-    }
-});
+// terminalIconFour.addEventListener("click", function() {
+//     terminalIcon_clicked = !terminalIcon_clicked;
+//     if (terminalIcon_clicked) {
+//         terminalIconFour.style.background = terminalIcon_active_path;
+//         terminalIconFour.style.width = "3rem";
+//         terminalIconFour.style.height = "3rem";
+//     }else {
+//         terminalIconFour.style.background = terminalIcon_inactive_path;
+//         terminalIconFour.style.width = "3rem";
+//         terminalIconFour.style.height = "3rem";
+//     }
+// });
 
-terminalIconFour.addEventListener("mouseover", function() {
-    terminalIconFour.style.opacity = 0.7;
-});
+// terminalIconFour.addEventListener("mouseover", function() {
+//     terminalIconFour.style.opacity = 0.7;
+// });
 
-terminalIconFour.addEventListener("mouseout", function() {
-    if (!terminalIcon_clicked) {
-        terminalIconFour.style.opacity = 0.7;
-    }
-});
+// terminalIconFour.addEventListener("mouseout", function() {
+//     if (!terminalIcon_clicked) {
+//         terminalIconFour.style.opacity = 0.7;
+//     }
+// });
 
-terminalIconFive.addEventListener("click", function() {
-    terminalIcon_clicked = !terminalIcon_clicked;
-    if (terminalIcon_clicked) {
-        terminalIconFive.style.background = terminalIcon_active_path;
-        terminalIconFive.style.width = "3rem";
-        terminalIconFive.style.height = "3rem";
-    }else {
-        terminalIconFive.style.background = terminalIcon_inactive_path;
-        terminalIconFive.style.width = "3rem";
-        terminalIconFive.style.height = "3rem";
-    }
-});
+// terminalIconFive.addEventListener("click", function() {
+//     terminalIcon_clicked = !terminalIcon_clicked;
+//     if (terminalIcon_clicked) {
+//         terminalIconFive.style.background = terminalIcon_active_path;
+//         terminalIconFive.style.width = "3rem";
+//         terminalIconFive.style.height = "3rem";
+//     }else {
+//         terminalIconFive.style.background = terminalIcon_inactive_path;
+//         terminalIconFive.style.width = "3rem";
+//         terminalIconFive.style.height = "3rem";
+//     }
+// });
 
-terminalIconFive.addEventListener("mouseover", function() {
-    terminalIconFive.style.opacity = 0.7;
-});
+// terminalIconFive.addEventListener("mouseover", function() {
+//     terminalIconFive.style.opacity = 0.7;
+// });
 
-terminalIconFive.addEventListener("mouseout", function() {
-    if (!terminalIcon_clicked) {
-        terminalIconFive.style.opacity = 0.7;
-    }
-});
+// terminalIconFive.addEventListener("mouseout", function() {
+//     if (!terminalIcon_clicked) {
+//         terminalIconFive.style.opacity = 0.7;
+//     }
+// });
 
 notificationsGlobalIcon.addEventListener("click", function() {
     notificationsIcon_clicked = !notificationsIcon_clicked;

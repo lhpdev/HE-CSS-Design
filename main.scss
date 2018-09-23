@@ -1,8 +1,8 @@
 $font-stack: 'Signika', sans-serif;
-$bg-default-0-1: rgba(55, 242, 255, 0.1);
-$bg-default-0-2: rgba(55, 242, 255, 0.2);
-$bg-default-0-4: rgba(55, 242, 255, 0.4);
-$bg-default-0-6: rgba(55, 242, 255, 0.6);
+$bg-default-0-1: rgba(23, 196, 230, 0.1);
+$bg-default-0-2: rgba(23, 196, 230, 0.2);
+$bg-default-0-4: rgba(23, 196, 230, 0.4);
+$bg-default-0-6: rgba(23, 196, 230, 0.6);
 
 $default-input-color: rgba(137, 173, 175, 0.8);
 
@@ -35,8 +35,8 @@ body {
     margin: 10px;
     grid-area: left-bar;
     display: grid;
-    width: 10rem;
-    height: 2.5rem;
+    width: 15rem;
+    height: 3.5rem;
     grid-template-columns: [column-1-start] 1rem [column-1-end column-2-start] 1fr [column-2-end column-3-start] 1fr [column-3-end];
     grid-template-rows: 100%;
     justify-self: left;
@@ -70,7 +70,7 @@ body {
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 1rem auto;
+    grid-template-rows: auto 1.15rem;
 }
 
 .left-panel__first_half_right_top {
@@ -80,7 +80,7 @@ body {
 }
 
 .left-panel__first_half_right_bottom {
-    background: linear-gradient(-45deg, rgba(255,0,0,0) 40%, $bg-default-0-2 0%);
+    background: linear-gradient(-51deg, rgba(255,0,0,0) 40%, $bg-default-0-2 0%);
     grid-row: 2 / 3;
     grid-column: 1 / 2;
 }
@@ -110,13 +110,16 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center;
-}
-
-.left-panel__second_half_left_top #left-panel-clock {
-    width: 3rem;
-    background: $bg-default-0-4;
-    border-radius: 3px;
-    margin: 2px;
+    #left-panel-clock {
+        background: $bg-default-0-4;
+        padding-top: 2px;
+        width: 4rem;
+        height: 1.2rem;
+        align-self: center;
+        border-radius: 3px;
+        margin: 2px;
+        font-size: 11pt;
+    }
 }
 
 .left-panel__second_half_left_bottom {
@@ -155,8 +158,8 @@ body {
 .header-section {
     justify-self: center;
     margin-top: 5px;
-    width: 40rem;
-    height: 5rem;
+    width: 50rem;
+    height: 7rem;
     background: $bg-default-0-2;
     grid-area: header-section;
     display: grid;
@@ -189,8 +192,8 @@ body {
     margin: 10px;
     grid-area: right-bar;
     display: grid;
-    width: 10rem;
-    height: 2.5rem;
+    width: 15rem;
+    height: 3.5rem;
     grid-template-columns: [column-1-start] 1fr [column-1-end column-2-start] 1fr [column-2-end column-3-start] 1rem [column-3-end];
     grid-template-rows: 100%;
     justify-self: right;
@@ -209,7 +212,7 @@ body {
     grid-column: 1 / 2;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: [column-1-start] 1fr [column-1-end column-2-start] 1.05rem [column-2-end column-3-start] 1.05rem [column-3-end];
+    grid-template-rows: [column-1-start] 1fr [column-1-end column-2-start] 1rem [column-2-end column-3-start] 0.95rem [column-3-end];
 }
 
 .right-panel__first_half_left_row_1 {
@@ -230,22 +233,13 @@ body {
 }
 
 .right-panel__first_half_right {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: [column-1-start] 1fr [column-1-end column-2-start] 1.05rem [column-2-end];
-}
-
-.right-panel__first_half_right_top {
     background: $bg-default-0-2;
     grid-row: 1 / 2;
-    grid-column: 1 / 2;
-}
-
-.right-panel__first_half_right_bottom {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
+    grid-column: 2 / 3;
+    height: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .right-panel__second_half {
@@ -261,17 +255,23 @@ body {
     grid-column: 1 / 2;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 1rem auto;
+    grid-template-rows: auto 1.15rem;
 }
 
 .right-panel__second_half_left_top {
     background: $bg-default-0-2;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
+    #left-panel-clock {
+    width: 3rem;
+    background: $bg-default-0-4;
+    border-radius: 3px;
+    margin: 2px;
+}
 }
 
 .right-panel__second_half_left_bottom {
-    background: linear-gradient(45deg, rgba(255,0,0,0) 40%, $bg-default-0-2 0%);
+    background: linear-gradient(51deg, rgba(255,0,0,0) 40%, $bg-default-0-2 0%);
     grid-row: 2 / 3;
     grid-column: 1 / 2;
 }
@@ -288,6 +288,7 @@ body {
     justify-content: center;
     p {
         color: rgba(255, 255, 255, 1);
+        font-size: 11pt;
     }
     &:hover {
         cursor: pointer;
@@ -305,7 +306,7 @@ body {
     z-index: 10;
     height: 13rem;
     width: 15rem;
-    right: 6.2rem;
+    right: 10.2rem;
     top: 1.7rem;
     visibility: visible;
     display: flex;
@@ -408,13 +409,14 @@ body {
 }
 /* Conky CSS Start */
 .conky-section {
-    margin: 10px;
+    margin-right: 10px;
     width: 284px;
-    height: 524px;
+    height: 600px;
     align-self: center;
     background: $bg-default-0-2;
     grid-area: conky;
     display: grid;
+    justify-self: end;
     grid-template-columns: 100%;
     grid-template-rows: [row-1-start] 1rem [row-1-end row-2-start] auto [row-2-end row-3-start] 1rem [row-3-end];
 }
@@ -453,7 +455,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     h1 {
         margin: 10px;
-        color: orange;
+        color: rgba(255, 166, 0, 0.8);
         font-size: 16pt;
     }
     td {
@@ -464,19 +466,16 @@ body {
         margin-left: 10px;
         font-size: 10pt;
     }
-    tr {
-        color: $text-color-white-0-6;
-        text-align: center;
-
-        .first {
-            color: $text-color-white-0-4;
-        }
-    
-        .second {
+    tr.first{
             color: $text-color-white-0-8;
-        }
     }
-
+    tr.second {
+        color: $text-color-white-0-6;
+    }
+    tr.third {
+        color: $text-color-white-0-4; 
+    }
+    color: $text-color-white-0-4;
 }
 
 .conky-menu__memory {
@@ -490,22 +489,18 @@ body {
         z-index: 10;
         position: relative;
     }
-    
+}
+
+.conky-menu__memory__table {
+    display: flex;
+    justify-content: center;
 }
 
 .conky-menu__memory__graph {
     height: 4.5rem;
-}
-
-.conky-menu__memory__table {
-    justify-self: center;
-    align-items: center;
-    text-align: center;
-}
-
-.conky__item table {
-    margin-bottom: 5px;
-    text-align: center;
+    p {
+        color: white;
+    }
 }
 
 .conky-bottom-border {
@@ -513,13 +508,12 @@ body {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
 }
-/* Conky CSS Start */
 
 .bottom-menu-section {
     justify-self: center;
-    margin: 30px;
-    width: 35rem;
-    height: 4rem;
+    margin: 10px;
+    width: 40rem;
+    height: 5rem;
     background: $bg-default-0-2;
     grid-area: bottom-menu;
     display: grid;
@@ -540,6 +534,9 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    span {
+        padding-left: 1.5rem;
+    }
 }
 
 .bottom-menu__right-border {
@@ -798,8 +795,7 @@ body {
     background: url('./public/images/bottom-menu/terminal-icon.png');
     background-repeat: no-repeat;
     &:hover {
-        background: url('./public/images/bottom-menu/terminal-icon-hover.png');
-        opacity: 0.5;
+        opacity: 0.9;
         cursor: pointer;
     }
 
@@ -807,8 +803,8 @@ body {
 
 .HE-icon {
     margin-top: 0.7rem;
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 3rem;
+    height: 3rem;
     background: url('./public/images//header/left-toolbar/HE-icon.png');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -879,8 +875,8 @@ body {
     opacity: 0.7;
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4rem;
+    height: 4rem;
     &:hover {
         cursor: pointer;
     }
@@ -900,8 +896,8 @@ body {
     opacity: 0.7;
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .header-connection-right {
@@ -920,8 +916,8 @@ body {
     opacity: 0.7;
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4rem;
+    height: 4rem;
     &:hover {
         cursor: pointer;
     }
