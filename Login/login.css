@@ -156,8 +156,9 @@ body {
 }
 
 .content {
-  color: white;
-  background: rgba(23, 196, 230, 0.2);
+  color: rgba(155, 243, 255, 0.781);
+  font-size: 11pt;
+  background: rgba(23, 196, 230, 0.1);
   width: 28rem;
   height: 20rem;
   grid-area: login-content;
@@ -165,6 +166,40 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.content p {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.content input {
+  background: rgba(255, 255, 255, 0.267);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: none;
+  width: 12rem;
+  text-align: center;
+  color: #cfcfcf;
+  font-weight: bold;
+}
+.content input::placeholder {
+  text-align: center;
+  color: #cfcfcf;
+}
+.content button {
+  color: rgba(255, 255, 255, 0.781);
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.2rem;
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  background: rgba(23, 196, 230, 0.2);
+}
+.content button:hover {
+  background: rgba(23, 196, 230, 0.6);
+}
+.content button:active {
+  background: rgba(23, 196, 230, 0.4);
 }
 
 .right-edge {
@@ -286,6 +321,28 @@ body {
   background: rgba(23, 196, 230, 0.4);
   grid-row: 1/2;
   grid-column: 3/4;
+}
+
+.HE-icon {
+  margin-top: 0.7rem;
+  width: 3rem;
+  height: 3rem;
+  background: url("../public/images//header/left-toolbar/HE-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+}
+
+.settings-icon {
+  background: url("../public/images/login/setting-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 2rem;
+  height: 2rem;
+}
+
+#left-panel-clock {
+  color: white;
 }
 
 /*# sourceMappingURL=login.css.map */
