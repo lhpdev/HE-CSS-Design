@@ -1,18 +1,13 @@
-body {
-  margin: 0;
-  min-width: 85rem;
-  font-family: "Signika", sans-serif;
+.login-screen {
   height: 100vh;
-  background: black;
   background-image: url("../public/images/login-bg.png");
   background-repeat: no-repeat;
-  color: black;
   display: grid;
   grid-template-columns: 20% 30% 30% 20%;
   grid-template-rows: [row-1-start] 10rem [row-1-end row-2-start] 1fr [row-2-end row-3-start] 8rem [row-3-end];
   grid-template-areas: "left-bar .  . right-bar" ". login login ." ". . . .";
 }
-body label {
+.login-screen label {
   letter-spacing: 1px;
 }
 

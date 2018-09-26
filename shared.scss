@@ -1,5 +1,12 @@
-
 @import "_variables.scss";
+
+body {
+  margin: 0;
+  min-width: 85rem;
+  max-width: 120rem;
+  font-family: $font-stack;
+  background: black;
+}
 
 .loader,
 .loader:after {

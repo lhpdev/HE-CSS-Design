@@ -11,7 +11,7 @@ loginButton.addEventListener("click", function() {
         loader.style.display = "block";
         loginButton.style.display = "none";
         setTimeout(function () {
-            window.location.href = "./Main/index.html"; //will redirect to your blog page (an ex: blog.html)
+            window.location.href = "./Boot/index.html"; //will redirect to your blog page (an ex: blog.html)
          }, 2000); //will call the function after 2 secs.
         login_clicked = !login_clicked;
         loader_active = !loader_active;
