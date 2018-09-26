@@ -1,0 +1,14 @@
+.boot-screen {
+  color: white;
+  height: 100vh;
+  background-image: url("../public/images/login-bg.png");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boot-screen label {
+  letter-spacing: 1px;
+}
+
+/*# sourceMappingURL=boot.css.map */
