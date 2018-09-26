@@ -5,233 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Experience</title>
-    <link rel="stylesheet" href="main.css">
+    <title>LogViewer</title>
+    <link rel="stylesheet" href="./Login/login.css">
+    <link rel="stylesheet" href="./shared.css">
     <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
 </head>
 
 <body>
-  <div class="main-screen">
     <div class="left-panel-section">
-        <div class="left-panel__left-border left-panel"></div>
-        <div class="left-panel__first_half left-panel">
-          <div class="left-panel__first_half_left">
-              <span class="HE-icon"></span>
-          </div>
-          <div class="left-panel__first_half_right">
-            <div class="left-panel__first_half_right_top"></div>
-            <div class="left-panel__first_half_right_bottom"></div>
-          </div>
+            <div class="left-panel__left-border left-panel"></div>
+            <div class="left-panel__first_half left-panel">
+            <div class="left-panel__first_half_left">
+                <span class="HE-icon"></span>
+            </div>
+            <div class="left-panel__first_half_right">
+                <div class="left-panel__first_half_right_top"></div>
+                <div class="left-panel__first_half_right_bottom"></div>
+            </div>
+            </div>
+            <div class="left-panel__second_half left-panel">
+            <div class="left-panel__second_half_left">
+                <div class="left-panel__second_half_left_top">
+                    <div id="left-panel-clock"></div>
+                </div>
+                <div class="left-panel__second_half_left_bottom"></div>
+            </div>
+            <div class="left-panel__second_half_right">
+                <div class="left-panel__second_half_right_row_1"></div>
+                <div class="left-panel__second_half_right_row_2"></div>
+                <div class="left-panel__second_half_right_row_3"></div>
+            </div>
+            </div>
+    </div>
+    <div class="login-section">
+        <div class="left-edge"></div>
+        <div class="content">
+            <label>Login</label>
+            <input class="input-login" placeholder="user" />
+            <label>Password</label>
+            <input class="input-login" placeholder="password" type="password"/>
+            <div class="loader"></div>
+            <button class="login-button">SUBMIT</button>
         </div>
-        <div class="left-panel__second_half left-panel">
-          <div class="left-panel__second_half_left">
-              <div class="left-panel__second_half_left_top">
-                  <div id="left-panel-clock"></div>
-              </div>
-              <div class="left-panel__second_half_left_bottom"></div>
-          </div>
-          <div class="left-panel__second_half_right">
-            <div class="left-panel__second_half_right_row_1"></div>
-            <div class="left-panel__second_half_right_row_2"></div>
-            <div class="left-panel__second_half_right_row_3"></div>
-          </div>
-        </div>
+        <div class="right-edge"></div>
     </div>
     <div class="right-panel-section">
-      <div class="right-panel__first_half right-panel">
+    <div class="right-panel__first_half right-panel">
         <div class="right-panel__first_half_left">
-          <div class="right-panel__first_half_left_row_1"></div>
-          <div class="right-panel__first_half_left_row_2"></div>
-          <div class="right-panel__first_half_left_row_3"></div>
+        <div class="right-panel__first_half_left_row_1"></div>
+        <div class="right-panel__first_half_left_row_2"></div>
+        <div class="right-panel__first_half_left_row_3"></div>
         </div>
         <div class="right-panel__first_half_right">
             <div class="right-panel__first_half_right_top">
-              <div class="notifications-content">
+            <div class="notifications-content">
                 <span class="notification-user"></span>
                 <span class="notification-message"></span>
                 <span class="notification-main"></span>
-              </div>
+            </div>
             </div>
             <div class="right-panel__first_half_right_bottom"></div>
         </div>
         <div class="right-panel__left-border right-panel"></div>
-      </div>
-      <div class="right-panel__second_half right-panel">
+    </div>
+    <div class="right-panel__second_half right-panel">
         <div class="right-panel__second_half_left">
-          <div class="right-panel__second_half_left_top"></div>
-          <div class="right-panel__second_half_left_bottom"></div>
+        <div class="right-panel__second_half_left_top"></div>
+        <div class="right-panel__second_half_left_bottom"></div>
         </div>
         <div class="right-panel__second_half_right">
-          <span class="user-profile-icon"></span>
-          <p>Lucas</p>
+        <span class="settings-icon"></span>
         </div>
-      </div>
-      <div class="right-panel__right-border right-panel"></div>
     </div>
-    <div class="notification__pool-container" id="notifications">
-      <div class="notification__top-border" id="notificationsheader"></div>
-      <div class="notification__content">
-        <div class="notification__content__header">
-          <p class="notification__label">Notifications</p>
-          <span class="notification__toggle">Eduram</span>
-        </div>
-        <div class="notification__content__gap">
-          <p>EARLIER</p>
-        </div>
-        <div class="notification__content__list">
-          <div class="notification">
-            <span class="user-profile-icon"></span>
-            <p> Password Breaker has <b>finished</b></p>
-          </div>
-          <div class="notification">
-            <span class="user-profile-icon"></span>
-            <p> Password Breaker has <b>finished</b></p>
-          </div>
-          <div class="notification">
-            <span class="user-profile-icon"></span>
-            <p> Password Breaker has <b>finished</b></p>
-          </div>
-          <div class="notification">
-            <span class="user-profile-icon"></span>
-            <p> Password Breaker has <b>finished</b></p>
-          </div>
-        </div>
-        <div class="notification__content__gap"></div>
-      </div>
-      <div class="notification__bottom-border">
-        <p>See All</p>
-      </div>
+    <div class="right-panel__right-border right-panel"></div>
     </div>
-    <div class="header-section">
-      <div class="header__left-border"></div>
-      <div class="header__content">
-        <span class="header-gateway"></span>
-        <span class="header-connection-left"></span>
-        <span class="header-bouncing"></span>
-        <span class="header-connection-right"></span>
-        <span class="header-server"></span>
-      </div>
-      <div class="header__right-border"></div>
-    </div>
-    <div class="conky-section">
-      <div class="conky__top-border"></div>
-      <div class="conky__content">
-        <div class="conky-menu">
-          <div class="conky__item conky-menu__cpu">
-            <h1>CPU</h1>
-            <table align="center">
-              <tr class="first">
-                <td align='left'>Xorg</td>
-                <td>61.1%</td>
-              </tr>
-              <tr class="second">
-                <td align='left'>conky</td>
-                <td>61.1%</td>
-              </tr>
-              <tr class="third">
-                <td align='left'>drawers</td>
-                <td>61.1%</td>
-              </tr>
-            </table>
-          </div>
-          <div class="conky__item conky-menu__network">
-            <h1>Network</h1>
-            <table align="center">
-              <tr class="first">
-                <td align='left'>Download</td>
-                <td>540KBps/s</td>
-              </tr>
-              <tr class="second">
-                <td align='left'>Upload</td>
-                <td>150KBps/s</td>
-              </tr>
-            </table>
-          </div>
-          <div class="conky__item conky-menu__memory">
-            <div class="conky-menu__memory__header">
-              <h1>Memory</h1>
-              <h3>swap: 10%</h3>
-            </div>
-            <div class="conky-menu__memory__graph">
-              <p>50%</p>
-              <span class="conky-memory-graph"></span>
-            </div>
-            <div class="conky-menu__memory__table">
-              <table text-align="center">
-                  <tr class="first">
-                    <td>chrome</td>
-                    <td>10MiB</td>
-                  </tr>
-                  <tr class="first">
-                    <td>chrome</td>
-                    <td>10MiB</td>
-                  </tr>
-                  <tr class="first">
-                    <td>chrome</td>
-                    <td>10MiB</td>
-                  </tr>
-                </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="conky__bottom-border"></div>
-    </div>
-    <div class="application-view-container" id="logviewer">
-      <div class="application-view__left-border"></div>
-      <div class="application-view__content">
-        <div class="application-view__top-bar" id="logviewerheader">
-          <div class="application-view__top-bar__left">
-              <span class="logviewer-icon"></span>
-              <p id="logviewer__active-ip">127.0.0.1</p>
-              <p>Log Viewer</p>
-          </div>
-          <div class="application-view__top-bar__right">
-            <button class="application-view__minimize-button">-</button>
-            <button class="application-view__close-button">X</button>
-          </div>
-        </div>
-        <div class="application-view__filter-options">
-          <div class="application-view__filter-options__gap">
-              <span class="application__trace"></span>
-          </div>
-          <div class="application-view__filter-options__content">
-            <div class="application-view__filter-options__content__icons">
-                <span class="pencil-filter-icon"></span>
-                <span class="hand-filter-icon"></span>
-                <span class="calendar-filter-icon"></span>
-                <span class="deep-filter-icon"></span>
-                <input type="text" name="search-bar" placeholder="Search">
-            </div>
-          </div>
-          <div class="application-view__filter-options__gap">
-            <span class="application__trace"></span>
-          </div>
-        </div>
-        <div class="application-view__scrow-view-box">
-            <iframe id="application-view-log-viewer-frame" src="./LogViewer/index.html" width="550" height="280">Text</iframe>
-        </div>
-        <div class="application-view__bottom_options">
-          <button>
-            +
-          </button>
-        </div>
-      </div>
-      <div class="application-view__right-border"></div>
-    </div>
-    <div class="bottom-menu-section">
-      <div class="bottom-menu__left-border"></div>
-      <div class="bottom-menu__content">
-        <span id="one" class="terminal-icon"></span>
-        <span id="two" class="terminal-icon"></span>
-        <span id="three" class="terminal-icon"></span>
-        <span id="four" class="terminal-icon"></span>
-        <span id="five" class="terminal-icon"></span>
-      </div>
-      <div class="bottom-menu__right-border"></div>
-    </div>
-  </div>
-  <script src="main.js"></script>
+    <script src="./Login/login.js"></script>
 </body>
 </html>
-

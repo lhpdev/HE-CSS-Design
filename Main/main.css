@@ -2,11 +2,12 @@ body {
   margin: 0;
   min-width: 85rem;
   font-family: "Signika", sans-serif;
+  background: black;
 }
 
 .main-screen {
   height: 100vh;
-  background-image: url("./public/images/background.png");
+  background-image: url("../public/images/background.png");
   background-repeat: no-repeat;
   color: black;
   display: grid;
@@ -16,126 +17,7 @@ body {
 }
 
 .left-panel-section {
-  margin: 10px;
   grid-area: left-bar;
-  display: grid;
-  width: 15rem;
-  height: 3.5rem;
-  grid-template-columns: [column-1-start] 1rem [column-1-end column-2-start] 1fr [column-2-end column-3-start] 1fr [column-3-end];
-  grid-template-rows: 100%;
-  justify-self: left;
-}
-
-.left-panel__left-border {
-  background: rgba(23, 196, 230, 0.4);
-  grid-row: 1/2;
-  grid-column: 1/2;
-}
-
-.left-panel__first_half {
-  grid-row: 1/2;
-  grid-column: 2/3;
-  display: grid;
-  grid-template-columns: [column-1-start] 1fr [column-1-end column-2-start] 1rem [column-2-end];
-  grid-template-rows: 100%;
-}
-
-.left-panel__first_half_left {
-  background: rgba(23, 196, 230, 0.2);
-  grid-row: 1/2;
-  grid-column: 1/2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left-panel__first_half_right {
-  grid-row: 1/2;
-  grid-column: 2/3;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto 1.15rem;
-}
-
-.left-panel__first_half_right_top {
-  background: rgba(23, 196, 230, 0.2);
-  grid-row: 1/2;
-  grid-column: 1/2;
-}
-
-.left-panel__first_half_right_bottom {
-  background: linear-gradient(-51deg, rgba(255, 0, 0, 0) 40%, rgba(23, 196, 230, 0.2) 0%);
-  grid-row: 2/3;
-  grid-column: 1/2;
-}
-
-.left-panel__second_half {
-  grid-row: 1/2;
-  grid-column: 3/4;
-  display: grid;
-  grid-template-columns: [column-1-start] 1fr [column-1-end column-2-start] 1rem [column-2-end];
-  grid-template-rows: 100%;
-}
-
-.left-panel__second_half_left {
-  grid-row: 1/2;
-  grid-column: 1/2;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: [column-1-start] 1fr [column-1-end column-2-start] 1.05rem [column-2-end];
-}
-
-.left-panel__second_half_left_top {
-  background: rgba(23, 196, 230, 0.2);
-  grid-row: 1/2;
-  grid-column: 1/2;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.left-panel__second_half_left_top #left-panel-clock {
-  background: rgba(23, 196, 230, 0.4);
-  padding-top: 2px;
-  width: 4rem;
-  height: 1.2rem;
-  align-self: center;
-  border-radius: 3px;
-  margin: 2px;
-  font-size: 11pt;
-}
-
-.left-panel__second_half_left_bottom {
-  grid-row: 2/3;
-  grid-column: 1/2;
-}
-
-.left-panel__second_half_right {
-  grid-row: 1/2;
-  grid-column: 2/3;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: [column-1-start] 1fr [column-1-end column-2-start] 1.05rem [column-2-end column-3-start] 1.05rem [column-3-end];
-}
-.left-panel__second_half_right:hover {
-  cursor: pointer;
-}
-
-.left-panel__second_half_right_row_1 {
-  background: rgba(23, 196, 230, 0.2);
-  grid-row: 1/2;
-  grid-column: 1/2;
-}
-
-.left-panel__second_half_right_row_2 {
-  background: linear-gradient(-45deg, rgba(255, 0, 0, 0) 40%, rgba(23, 196, 230, 0.2) 0%);
-  grid-row: 2/3;
-  grid-column: 1/2;
-}
-
-.left-panel__second_half_right_row_3 {
-  grid-row: 3/4;
-  grid-column: 1/2;
 }
 
 .header-section {
@@ -172,14 +54,7 @@ body {
 }
 
 .right-panel-section {
-  margin: 10px;
   grid-area: right-bar;
-  display: grid;
-  width: 15rem;
-  height: 3.5rem;
-  grid-template-columns: [column-1-start] 1fr [column-1-end column-2-start] 1fr [column-2-end column-3-start] 1rem [column-3-end];
-  grid-template-rows: 100%;
-  justify-self: right;
 }
 
 .right-panel__first_half {
@@ -615,7 +490,7 @@ body {
 }
 
 .logviewer-icon {
-  background: url("./public/images/logviewer/logviewer-icon.png");
+  background: url("../public/images/logviewer/logviewer-icon.png");
   width: 1.7rem;
   height: 1.7rem;
   background-repeat: no-repeat;
@@ -659,7 +534,7 @@ body {
 }
 
 .pencil-filter-icon {
-  background: url("./public/images/logviewer/pencil-filter-icon.png");
+  background: url("../public/images/logviewer/pencil-filter-icon.png");
   opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -668,7 +543,7 @@ body {
 }
 
 .hand-filter-icon {
-  background: url("./public/images/logviewer/hand-filter-icon.png");
+  background: url("../public/images/logviewer/hand-filter-icon.png");
   opacity: 0.9;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -677,7 +552,7 @@ body {
 }
 
 .calendar-filter-icon {
-  background: url("./public/images/logviewer/calendar-filter-icon.png");
+  background: url("../public/images/logviewer/calendar-filter-icon.png");
   opacity: 0.9;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -686,7 +561,7 @@ body {
 }
 
 .deep-filter-icon {
-  background: url("./public/images/logviewer/deep-filter-icon.png");
+  background: url("../public/images/logviewer/deep-filter-icon.png");
   opacity: 0.9;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -716,7 +591,7 @@ body {
 }
 
 .application__trace {
-  background: url("./public/images/logviewer/trace.png");
+  background: url("../public/images/logviewer/trace.png");
   background-repeat: no-repeat;
   background-size: 100%;
   padding-left: 5px;
@@ -776,7 +651,7 @@ body {
   opacity: 0.7;
   width: 3rem;
   height: 3rem;
-  background: url("./public/images/bottom-menu/terminal-icon.png");
+  background: url("../public/images/bottom-menu/terminal-icon.png");
   background-repeat: no-repeat;
 }
 .terminal-icon:hover {
@@ -788,7 +663,7 @@ body {
   margin-top: 0.7rem;
   width: 3rem;
   height: 3rem;
-  background: url("./public/images//header/left-toolbar/HE-icon.png");
+  background: url("../public/images//header/left-toolbar/HE-icon.png");
   background-repeat: no-repeat;
   background-size: 100%;
   display: block;
@@ -797,7 +672,7 @@ body {
 .conky-memory-graph {
   width: 5rem;
   height: 5rem;
-  background: url("./public/images/conky-sidebar/graph.png");
+  background: url("../public/images/conky-sidebar/graph.png");
   background-repeat: no-repeat;
   background-size: 100%;
   display: block;
@@ -812,7 +687,7 @@ body {
 }
 
 .notification-user {
-  background: url("./public/images/header/right-toolbar/notification-user.png");
+  background: url("../public/images/header/right-toolbar/notification-user.png");
   opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -821,7 +696,7 @@ body {
 }
 
 .notification-message {
-  background: url("./public/images/header/right-toolbar/notification-message.png");
+  background: url("../public/images/header/right-toolbar/notification-message.png");
   opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -830,7 +705,7 @@ body {
 }
 
 .notification-main {
-  background: url("./public/images/header/right-toolbar/notification-main.png");
+  background: url("../public/images/header/right-toolbar/notification-main.png");
   opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 90%;
@@ -846,7 +721,7 @@ body {
 }
 
 .user-profile-icon {
-  background: url("./public/images/header/right-toolbar/user-profile-icon.png");
+  background: url("../public/images/header/right-toolbar/user-profile-icon.png");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 1.3rem;
@@ -854,7 +729,7 @@ body {
 }
 
 .header-gateway {
-  background: url("./public/images/header/header-center/pc-icon.png");
+  background: url("../public/images/header/header-center/pc-icon.png");
   opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -866,7 +741,7 @@ body {
 }
 
 .header-connection-left {
-  background: url("./public/images/header/header-center/connection.png");
+  background: url("../public/images/header/header-center/connection.png");
   opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -875,7 +750,7 @@ body {
 }
 
 .header-bouncing {
-  background: url("./public/images/header/header-center/pc-icon.png");
+  background: url("../public/images/header/header-center/pc-icon.png");
   opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -884,7 +759,7 @@ body {
 }
 
 .header-connection-right {
-  background: url("./public/images/header/header-center/connection.png");
+  background: url("../public/images/header/header-center/connection.png");
   opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -895,7 +770,7 @@ body {
 }
 
 .header-server {
-  background: url("./public/images/header/header-center/pc-icon.png");
+  background: url("../public/images/header/header-center/pc-icon.png");
   opacity: 0.7;
   background-repeat: no-repeat;
   background-size: 100%;

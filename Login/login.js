@@ -1,3 +1,33 @@
+var loginButton = document.querySelector('.login-button');
+var loader = document.querySelector('.loader');
+
+var login_clicked = false;
+var loader_active = false;
+
+loginButton.addEventListener("click", function() {
+    login_clicked = !login_clicked;
+    loader_active = !loader_active;
+    if (login_clicked) {
+        loader.style.display = "block";
+        loginButton.style.display = "none";
+        setTimeout(function () {
+            window.location.href = "./Main/index.html"; //will redirect to your blog page (an ex: blog.html)
+         }, 2000); //will call the function after 2 secs.
+        login_clicked = !login_clicked;
+        loader_active = !loader_active;
+        loader.style.display = "block";
+        loginButton.display = "none";
+    }
+});
+
+// function wait(ms){
+//     var start = new Date().getTime();
+//     var end = start;
+//     while(end < start + ms) {
+//       end = new Date().getTime();
+//    }
+//  }
+
 var current_date = Date();
 
 function startTime() {
@@ -15,3 +45,4 @@ function checkTime(i) {
 }
 
 startTime();
+
