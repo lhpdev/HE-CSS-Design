@@ -6,9 +6,16 @@
   background-image: url("../public/images/login-bg.png");
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: flex-end;
   label {
     letter-spacing: 1px;
   }
+}
+
+#typedtext {
+  color: $bg-default-0-8;
+  opacity: 0.6;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
 }
