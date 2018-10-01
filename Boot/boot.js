@@ -1,5 +1,5 @@
 setTimeout(function () {
-    window.location.href = "../Main/index.html"; //will redirect to your blog page (an ex: blog.html)
+    window.location.href = "../Setup/index.html"; //will redirect to your blog page (an ex: blog.html)
 }, 10000);
 
 // set up text to print, each item in array is new line

@@ -20,14 +20,6 @@ loginButton.addEventListener("click", function() {
     }
 });
 
-// function wait(ms){
-//     var start = new Date().getTime();
-//     var end = start;
-//     while(end < start + ms) {
-//       end = new Date().getTime();
-//    }
-//  }
-
 var current_date = Date();
 
 function startTime() {

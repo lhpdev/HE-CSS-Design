@@ -19,6 +19,18 @@
   grid-area: right-bar;
 }
 
+.main-container {
+  width: 40rem;
+  height: 31rem;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  grid-area: setup;
+  justify-content: center;
+  align-items: center;
+}
+
 .setup-section {
   grid-area: setup;
   align-self: center;
@@ -29,6 +41,39 @@
   grid-template-columns: [column-1-start] 1rem [column-1-end column-2-start] 1fr [column-2-end column-3-start] 1rem [column-3-end];
   grid-template-rows: 100%;
   grid-template-areas: "left-edge setup-content right-edge";
+}
+
+.back-button {
+  visibility: hidden;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.progress-bar__left {
+  width: 33%;
+  height: 0.5rem;
+  opacity: 1;
+  background-color: rgba(23, 196, 230, 0.6);
+}
+
+.progress-bar__center {
+  width: 33%;
+  height: 0.2rem;
+  opacity: 0.35;
+  background-color: rgba(23, 196, 230, 0.6);
+}
+
+.progress-bar__right {
+  width: 33%;
+  height: 0.2rem;
+  opacity: 0.35;
+  background-color: rgba(23, 196, 230, 0.6);
 }
 
 .right-edge {
@@ -51,20 +96,6 @@
   padding: 0.5rem;
   margin: 0.5rem;
 }
-.content input {
-  background: rgba(255, 255, 255, 0.267);
-  padding: 0.5rem;
-  margin: 0.5rem;
-  border: none;
-  width: 12rem;
-  text-align: center;
-  color: #cfcfcf;
-  font-weight: bold;
-}
-.content input::placeholder {
-  text-align: center;
-  color: #cfcfcf;
-}
 .content button {
   color: rgba(255, 255, 255, 0.781);
   font-weight: bold;
@@ -86,6 +117,10 @@
   width: 100%;
   height: 10%;
 }
+.header label {
+  margin-left: 1rem;
+  font-size: 15pt;
+}
 
 .options {
   width: 100%;
@@ -96,7 +131,7 @@
 }
 
 .option {
-  color: white;
+  color: #a8a8a8;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,30 +142,94 @@
 .title {
   width: 100%;
   height: 20%;
-  text-align: center;
+  text-align: left;
+  color: rgba(23, 196, 230, 0.6);
 }
 
 .checkboxes {
   margin-top: 3rem;
   width: 100%;
   height: 80%;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: space-between;
 }
-.checkboxes input {
-  margin: 1rem;
-  float: left;
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12pt;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.checkboxes label {
-  margin: 1rem;
-  float: left;
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(23, 196, 230, 0.6);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: rgba(137, 173, 175, 0.8);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: rgba(3, 74, 88, 0.6);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 5px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid orange;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .step_one {
-  visibility: hidden;
-  display: none;
+  visibility: visible;
+  display: inherit;
 }
 
 .step_two {
@@ -139,8 +238,8 @@
 }
 
 .step_three {
-  visibility: visible;
-  display: inherit;
+  visibility: hidden;
+  display: none;
 }
 
 .bottom-buttons {
