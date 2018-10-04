@@ -13,7 +13,19 @@ var notificationsPool = document.querySelector(".notification__pool-container");
 var document = document.querySelector('.main-screen');
 var logViewerApplication = document.querySelector('.application-view-container');
 var logViewerApplicationCloseButton = document.querySelector('.application-view__close-button');
+var loadingScreen = document.querySelector('#loading-screen');
+var bouncingHover = document.querySelector('.bouncing-hover');
+var bouncingDropDownList = document.querySelector('.bouncing-dropdown-list');
+var serverIp = document.querySelector('#server-ip');
+var gatewayIp = document.querySelector('#gateway-ip');
+var serverSection = document.querySelector('.server-section');
+var gatewaySection = document.querySelector('.gateway-section');
+var serverIpHover = document.querySelector('.server-ip-hover');
+var gatewayIpHover = document.querySelector('.gateway-ip-hover')
+var bouncingCreate = document.querySelector('#bouncing-create');
+var bouncingCreateSection = document.querySelector('.bouncing-create-section');
 
+var bouncingIconClicked = false;
 var path_pc_not_clicked = "url('../public/images/header/header-center/pc-icon.png')";
 var path_pc_clicked = "url('../public/images/header/header-center/pc-icon-active.png')";
 
@@ -23,17 +35,24 @@ var connection_inactive_path = "url('../public/images/header/header-center/conne
 var terminalIcon_active_path = "url('../public/images/bottom-menu/terminal-icon-active.png')";
 var terminalIcon_inactive_path = "url('../public/images/bottom-menu/terminal-icon.png')";
 
+var serverIpActive = false;
+var gatewayIpActive = true;
+
 var gateway_clicked = false;
 var server_clicked = false;
 var terminalIcon_clicked = false;
 var notificationsIcon_clicked = false;
 var notificationPoolOpen = false;
 var logViewerApplicationOpen = false;
+var bouncingCreateClicked = false;
 
 notificationsPool.style.visibility = 'hidden';
 logViewerApplication.style.visibility = 'hidden';
 
 var current_date = Date();
+
+resetApplication();
+loadApplication();
 
 function startTime() {
     var today = new Date();
@@ -51,17 +70,27 @@ function checkTime(i) {
 
 startTime();
 
+function resetApplication(){
+    loadingScreen.style.visibility = "visible";
+    loadingScreen.style.display = "inherit";
+}
+
+function loadApplication() {
+    console.log('call function');
+    setTimeout(function () {
+        loadingScreen.style.visibility = "hidden";
+        loadingScreen.style.display = "none";
+    }, 2000); //will call the function after 2 secs.
+}
+
 gatewayIcon.addEventListener("click", function() {
     gateway_clicked = !gateway_clicked;
     if (gateway_clicked) {
         gatewayIcon.style.background = path_pc_clicked;
         gatewayIcon.style.backgroundSize = "100%";
-        gatewayIcon.style.opacity = 1;
     }else {
         gatewayIcon.style.background = path_pc_not_clicked;
         gatewayIcon.style.backgroundSize = "100%";
-        gatewayIcon.style.opacity = 0.7;
-
     }
     if(gateway_clicked && server_clicked){
         connectionLeft.style.background = connection_active_path;
@@ -78,6 +107,91 @@ gatewayIcon.addEventListener("click", function() {
     }
 });
 
+bouncingIcon.addEventListener("click", function() {
+    bouncingIconClicked = !bouncingIconClicked;
+    if (bouncingIconClicked) {
+        bouncingHover.style.visibility = "hidden";
+        // bouncingHover.style.display = "none";
+        bouncingDropDownList.style.visibility = "visible";
+    } else {
+        bouncingHover.style.visibility = "visible";
+        // bouncingHover.style.display = "inherit";
+        // bouncingDropDownList.style.visibility = "hidden";
+    }
+});
+
+serverIp.addEventListener("click", function() {
+    if(!serverIpActive) {
+        serverIpActive = !serverIpActive;
+        gatewayIpActive = !gatewayIpActive;
+    }
+        
+    if (serverIpActive) {
+        serverSection.style.boxShadow = "0px 0px 0px 0px rgba(255, 255, 255, 0.472), 0 0px 30px 5px rgba(255,255,255,0.5)";
+        serverSection.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+        serverIp.style.color = "orange";
+        serverIp.style.opacity = "1";
+        serverIpHover.style.visibility = "hidden";
+
+        gatewaySection.style.boxShadow = "0px 0px 0px 0px rgba(255, 255, 255, 0), 0 0px 0px 0px rgba(255,255,255,0.5)";
+        gatewaySection.style.backgroundColor = "rgba(255, 255, 255, 0)";
+        gatewayIp.style.color = "white";
+        gatewayIp.style.opacity = "0.7";
+        
+    }
+});
+
+gatewayIp.addEventListener("click", function() {
+    if(!gatewayIpActive) {
+        serverIpActive = !serverIpActive;
+        gatewayIpActive = !gatewayIpActive;
+    }
+
+    if (gatewayIpActive) {
+        gatewaySection.style.boxShadow = "0px 0px 0px 0px rgba(255, 255, 255, 0.472), 0 0px 30px 5px rgba(255,255,255,0.5)";
+        gatewaySection.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+        gatewayIp.style.color = "orange";
+        gatewayIp.style.opacity = "1";
+        gatewayIpHover.style.visibility = "hidden";
+
+        serverSection.style.boxShadow = "0px 0px 0px 0px rgba(255, 255, 255, 0), 0 0px 0px 0px rgba(255,255,255,0.5)";
+        serverSection.style.backgroundColor = "rgba(255, 255, 255, 0)";
+        serverIp.style.color = "white";
+        serverIp.style.opacity = "0.7";
+    } 
+});
+
+serverIp.addEventListener("mouseover", function() {
+    serverIp.style.opacity = 1;
+    if(serverIpActive) {
+        serverIpHover.style.visibility = "hidden";
+    } else {
+        serverIpHover.style.visibility = "visible";
+    }
+});
+
+serverIp.addEventListener("mouseout", function() {
+    serverIpHover.style.visibility = "hidden";
+    if (!serverIpActive)
+    serverIp.style.opacity = 0.7;
+});
+
+gatewayIp.addEventListener("mouseover", function() {
+    gatewayIp.style.opacity = 1;
+    if(gatewayIpActive){
+        gatewayIpHover.style.visibility = "hidden";
+    } else {
+        gatewayIpHover.style.visibility = "visible";
+    }
+});
+
+gatewayIp.addEventListener("mouseout", function() {
+    gatewayIpHover.style.visibility = "hidden";
+    if (!gatewayIpActive)
+    gatewayIp.style.opacity = 0.7;
+});
+
+
 gatewayIcon.addEventListener("mouseover", function() {
     gatewayIcon.style.opacity = 1;
 });
@@ -88,9 +202,17 @@ gatewayIcon.addEventListener("mouseout", function() {
     }
 });
 
+bouncingIcon.addEventListener("mouseover", function() {
+    bouncingHover.style.visibility = "visible";
+})
+
+bouncingIcon.addEventListener("mouseout", function() {
+    bouncingHover.style.visibility = "hidden";
+})
 
 serverIcon.addEventListener("click", function() {
     server_clicked = !server_clicked;
+
     if (server_clicked) {
         serverIcon.style.background = path_pc_clicked;
         serverIcon.style.backgroundSize = "100%";
@@ -100,6 +222,7 @@ serverIcon.addEventListener("click", function() {
         serverIcon.style.backgroundSize = "100%";
         serverIcon.style.opacity = 0.7;
     }
+
     if(gateway_clicked && server_clicked){
         connectionLeft.style.background = connection_active_path;
         connectionLeft.style.backgroundSize = "100%";
@@ -124,6 +247,12 @@ serverIcon.addEventListener("mouseout", function() {
         serverIcon.style.opacity = 0.7;
     }
 });
+
+bouncingCreateSection.addEventListener("click", function() {
+    bouncingDropDownList.style.visibility = "hidden";
+    // bouncingCreateSection.style.visibility = "visible";
+});
+
 
 terminalIconOne.addEventListener("click", function() {
     terminalIcon_clicked = !terminalIcon_clicked;
