@@ -80,7 +80,7 @@
 .gateway-dropdown-list {
     background-color: $bg-default-0-4;
     position: absolute;
-    bottom: 680px;
+    top: 7rem;
     left: 29.5%;
     width: 10rem;
     height: 5rem;
@@ -117,7 +117,7 @@
 .server-ip-hover {
     width: 6rem;
     height: 1rem;
-    bottom: 770px;
+    top: 5rem;
     left: 69%;
     background-color: rgba(83, 82, 82, 0.553);
     position: absolute;
@@ -140,7 +140,7 @@
 .bouncing-hover {
     width: 6rem;
     height: 1rem;
-    top: 10px;
+    top: 0.7rem;
     left: 47%;
     background-color: rgba(83, 82, 82, 0.553);
     position: absolute;
@@ -163,8 +163,8 @@
 .gateway-ip-hover {
     width: 6rem;
     height: 1rem;
-    bottom: 770px;
-    left: 26%;
+    top: 5rem;
+    left: 25%;
     background-color: rgba(83, 82, 82, 0.553);
     position: absolute;
     visibility: hidden;
@@ -186,7 +186,7 @@
 .bouncing-dropdown-list {
     background-color: $bg-default-0-4;
     position: absolute;
-    bottom: 715px;
+    top: 6rem;
     left: 46%;
     width: 9rem;
     height: 5rem;
@@ -223,7 +223,7 @@
 .bouncing-create-section {
     background-color: rgba(0, 0, 0, 0.471);
     position: absolute;
-    bottom: 555px;
+    top: 6rem;
     left: 38.5%;
     width: 25rem;
     height: 15rem;
@@ -234,7 +234,7 @@
 .server-ip-dropdown-list {
     background-color: $bg-default-0-4;
     position: absolute;
-    bottom: 680px;
+    top: 7rem;
     left: 62%;
     width: 9rem;
     height: 5rem;
