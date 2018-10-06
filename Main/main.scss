@@ -140,10 +140,10 @@
 .bouncing-hover {
     width: 6rem;
     height: 1rem;
-    top: -150px;
-    left: 27%;
+    top: 10px;
+    left: 47%;
     background-color: rgba(83, 82, 82, 0.553);
-    position: relative;
+    position: absolute;
     visibility: hidden;
     z-index: 1;
     border: 4px solid rgba(128, 128, 128, 0.253);
@@ -163,10 +163,10 @@
 .gateway-ip-hover {
     width: 6rem;
     height: 1rem;
-    top: -60px;
+    bottom: 770px;
     left: 26%;
     background-color: rgba(83, 82, 82, 0.553);
-    position: relative;
+    position: absolute;
     visibility: hidden;
     z-index: 1;
     border: 4px solid rgba(128, 128, 128, 0.253);
