@@ -18,9 +18,9 @@
 
 .header-section {
     justify-self: center;
-    margin-top: 5px;
-    width: 50rem;
-    height: 7rem;
+    margin-top: 0.5rem;
+    width: 45rem;
+    height: 6.5rem;
     background: $bg-default-0-2;
     grid-area: header-section;
     display: grid;
@@ -51,7 +51,7 @@
 
 .gateway-section {
     width: 6rem;
-    height: 6rem;
+    height: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -279,7 +279,7 @@
 
 .server-section {
     width: 6rem;
-    height: 6rem;
+    height: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -421,8 +421,11 @@
     background-color: $bg-default-0-6;
     margin-bottom: 1rem;
     p  {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        background-color: rgba(0, 0, 0, 0.221);
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
         width: 5.5rem;
         text-align: center;
         font-size: 11pt;
@@ -558,9 +561,9 @@
 }
 /* Conky CSS Start */
 .conky-section {
-    margin-right: 10px;
-    width: 284px;
-    height: 600px;
+    margin-right: 0.5rem;
+    width: 16rem;
+    height: 30rem;
     align-self: center;
     background: $bg-default-0-2;
     grid-area: conky;
@@ -659,11 +662,11 @@
 }
 
 .bottom-menu-section {
+    padding-top: 2.5rem;
     justify-self: center;
     margin: 10px;
-    width: 40rem;
-    height: 5rem;
-    background: $bg-default-0-2;
+    width: 36rem;
+    height: 4rem;
     grid-area: bottom-menu;
     display: grid;
     grid-template-columns: [column-1-start] 1rem [column-1-end column-2-start] auto [column-2-end column-3-start] 1rem [column-3-end];
@@ -677,6 +680,7 @@
 }
 
 .bottom-menu__content {
+    background: $bg-default-0-2;
     grid-row: 1 / 2;
     grid-column: 2 / 3;
     display: flex;

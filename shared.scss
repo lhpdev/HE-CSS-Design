@@ -54,10 +54,10 @@ body {
 
 .left-panel-section {
   color: white;
-  margin: 10px;
+  margin: 0.5rem;
   grid-area: left-bar;
   display: grid;
-  width: 15rem;
+  width: 13rem;
   height: 3.5rem;
   grid-template-columns: [column-1-start] 1rem [column-1-end column-2-start] 1fr [column-2-end column-3-start] 1fr [column-3-end];
   grid-template-rows: 100%;
@@ -172,10 +172,10 @@ body {
 }
 
 .right-panel-section {
-  margin: 10px;
+  margin: 0.5rem;
   grid-area: right-bar;
   display: grid;
-  width: 15rem;
+  width: 13rem;
   height: 3.5rem;
   grid-template-columns: [column-1-start] 1fr [column-1-end column-2-start] 1fr [column-2-end column-3-start] 1rem [column-3-end];
   grid-template-rows: 100%;
