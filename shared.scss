@@ -65,7 +65,7 @@ body {
 }
 
 .left-panel__left-border {
-  background: rgba(23, 196, 230, 0.4);
+  background: $bg-default-0-4;
   grid-row: 1/2;
   grid-column: 1/2;
 }
@@ -79,7 +79,7 @@ body {
 }
 
 .left-panel__first_half_left {
-  background: rgba(23, 196, 230, 0.2);
+  background: $bg-default-0-2;
   grid-row: 1/2;
   grid-column: 1/2;
   display: flex;
@@ -96,13 +96,13 @@ body {
 }
 
 .left-panel__first_half_right_top {
-  background: rgba(23, 196, 230, 0.2);
+  background: $bg-default-0-2;
   grid-row: 1/2;
   grid-column: 1/2;
 }
 
 .left-panel__first_half_right_bottom {
-  background: linear-gradient(-51deg, rgba(255, 0, 0, 0) 40%, rgba(23, 196, 230, 0.2) 0%);
+  background: linear-gradient(-51deg, rgba(255, 0, 0, 0) 40%, $bg-default-0-2 0%);
   grid-row: 2/3;
   grid-column: 1/2;
 }
@@ -124,7 +124,7 @@ body {
 }
 
 .left-panel__second_half_left_top {
-  background: rgba(23, 196, 230, 0.2);
+  background: $bg-default-0-2;
   grid-row: 1/2;
   grid-column: 1/2;
   text-align: center;
@@ -133,7 +133,7 @@ body {
   align-items: center;
 }
 .left-panel__second_half_left_top #left-panel-clock {
-  background: rgba(23, 196, 230, 0.4);
+  background: $bg-default-0-4;
   padding-top: 2px;
   width: 4rem;
   height: 1.2rem;
@@ -160,13 +160,13 @@ body {
 }
 
 .left-panel__second_half_right_row_1 {
-  background: rgba(23, 196, 230, 0.2);
+  background: $bg-default-0-2;
   grid-row: 1/2;
   grid-column: 1/2;
 }
 
 .left-panel__second_half_right_row_2 {
-  background: linear-gradient(-45deg, rgba(255, 0, 0, 0) 40%, rgba(23, 196, 230, 0.2) 0%);
+  background: linear-gradient(-45deg, rgba(255, 0, 0, 0) 40%, $bg-default-0-2 0%);
   grid-row: 2/3;
   grid-column: 1/2;
 }
@@ -199,13 +199,13 @@ body {
 }
 
 .right-panel__first_half_left_row_1 {
-  background: rgba(23, 196, 230, 0.2);
+  background: $bg-default-0-2;
   grid-row: 1/2;
   grid-column: 1/2;
 }
 
 .right-panel__first_half_left_row_2 {
-  background: linear-gradient(45deg, rgba(255, 0, 0, 0) 40%, rgba(23, 196, 230, 0.2) 0%);
+  background: linear-gradient(45deg, rgba(255, 0, 0, 0) 40%, $bg-default-0-2 0%);
   grid-row: 2/3;
   grid-column: 1/2;
 }
@@ -216,7 +216,7 @@ body {
 }
 
 .right-panel__first_half_right {
-  background: rgba(23, 196, 230, 0.2);
+  background: $bg-default-0-2;
   grid-row: 1/2;
   grid-column: 2/3;
   height: 2.6rem;
@@ -226,7 +226,7 @@ body {
 }
 
 .right-panel__right-border {
-  background: rgba(23, 196, 230, 0.4);
+  background: $bg-default-0-4;
   grid-row: 1/2;
   grid-column: 3/4;
 }

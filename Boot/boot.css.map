@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["boot.scss","../_variables.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EACE;;;AAIJ;EACE,OCXe;EDYf;EACA;EACA","file":"boot.css"}
+{"version":3,"sourceRoot":"","sources":["boot.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EACE;;;AAIJ;EACE;EACA;EACA","file":"boot.css"}
