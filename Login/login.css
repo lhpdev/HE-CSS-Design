@@ -8,7 +8,14 @@
   grid-template-areas: "left-bar .  . right-bar" ". login login ." ". . . .";
 }
 .login-screen label {
+  -webkit-appearance: none;
   letter-spacing: 1px;
+  font-family: inherit;
+}
+.login-screen button {
+  font-family: inherit;
+  font-weight: bold;
+  -webkit-appearance: none;
 }
 
 .left-panel-section {
@@ -56,7 +63,9 @@
   width: 12rem;
   text-align: center;
   color: #cfcfcf;
-  font-weight: bold;
+  -webkit-appearance: none;
+  font-family: inherit;
+  font-style: bold;
 }
 .content input::placeholder {
   text-align: center;
