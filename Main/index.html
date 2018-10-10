@@ -11,12 +11,11 @@
   <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
 </head>
 
 <body>
-  <!-- <div id="mapid"></div> -->
   <div class="main-screen">
+    <div id="map"></div>
     <div class="left-panel-section">
         <div class="left-panel__left-border left-panel"></div>
         <div class="left-panel__first_half left-panel">
@@ -219,6 +218,17 @@
       </div>
       <div class="conky__bottom-border"></div>
     </div>
+    <div class="bottom-menu-section">
+        <div class="bottom-menu__left-border"></div>
+        <div class="bottom-menu__content">
+          <span id="one" class="terminal-icon"></span>
+          <span id="two" class="terminal-icon"></span>
+          <span id="three" class="terminal-icon"></span>
+          <span id="four" class="terminal-icon"></span>
+          <span id="five" class="terminal-icon"></span>
+        </div>
+        <div class="bottom-menu__right-border"></div>
+    </div>
     <div class="application-view-container" id="logviewer">
       <div class="application-view__left-border"></div>
       <div class="application-view__content">
@@ -261,19 +271,53 @@
       </div>
       <div class="application-view__right-border"></div>
     </div>
-    <div class="bottom-menu-section">
-      <div class="bottom-menu__left-border"></div>
-      <div class="bottom-menu__content">
-        <span id="one" class="terminal-icon"></span>
-        <span id="two" class="terminal-icon"></span>
-        <span id="three" class="terminal-icon"></span>
-        <span id="four" class="terminal-icon"></span>
-        <span id="five" class="terminal-icon"></span>
-      </div>
-      <div class="bottom-menu__right-border"></div>
-    </div>
   </div>
   <script src="main.js"></script>
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+  <script src="leaflet-tilelayer-colorfilter.min.js"></script>
+  <script>
+    var mymap = L.map('map').setView([51.505, -0.09], 13);
+
+    let myFilter = [
+        'blur:0px',
+        'brightness:95%',
+        'contrast:130%',
+        'grayscale:20%',
+        'hue:290deg',
+        'opacity:100%',
+        'invert:100%',
+        'saturate:300%',
+        'sepia:10%',
+    ];
+
+    // L.tileLayer.colorFilter('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
+    //     attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>',
+    //     filter: myFilter,
+    // }).addTo(mymap);
+
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.streets',
+        filter: myFilter,
+        accessToken: 'pk.eyJ1IjoibGhwZGV2IiwiYSI6ImNqbjNvbGZ0NTBnMWkzdm80bGo0dnJmMmQifQ.uyMXX1vUMYpn4HeBRUq8ug'
+    }).addTo(mymap);
+
+    var marker = L.marker([51.5, -0.09]).addTo(mymap);
+
+    var circle = L.circle([51.508, -0.11], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 500
+    }).addTo(mymap);
+
+    var polygon = L.polygon([
+        [51.509, -0.08],
+        [51.503, -0.06],
+        [51.51, -0.047]
+    ]).addTo(mymap);
+  </script>
 </body>
 </html>
 
