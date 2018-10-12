@@ -8,16 +8,19 @@
 }
 
 #map {
-  opacity: 0.5;
   position: relative;
   height: 100vh;
   width: 100vw;
   top: -17%;
   z-index: 1;
+  color: rgba(96, 250, 255, 0.993) !important;
 }
 #map .leaflet-left .leaflet-control {
   margin-top: 55rem !important;
   margin-left: 1rem !important;
+}
+#map .leaflet-container {
+  color: rgba(96, 250, 255, 0.993);
 }
 
 .left-panel-section {
