@@ -1,0 +1,119 @@
+@import "../../_variables.scss";
+
+.conky-section {
+    margin-right: 0.5rem;
+    width: 16rem;
+    height: 30rem;
+    align-self: center;
+    background: $bg-default-0-2;
+    display: grid;
+    justify-self: end;
+    grid-template-columns: 100%;
+    grid-template-rows: [row-1-start] 1rem [row-1-end row-2-start] auto [row-2-end row-3-start] 1rem [row-3-end];
+    z-index: 2;
+}
+
+.conky__top-border {
+    background: $bg-default-0-4;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.conky__content {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.conky__bottom-border {
+    background: $bg-default-0-4;
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+
+.conky-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conky__item {
+    padding: 1rem, 1rem ;
+    margin: 0.3rem;
+    width: 90%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 1.5em 1.5em;
+    h1 {
+        margin: 10px;
+        color: rgba(255, 166, 0, 0.8);
+        font-size: 15pt;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    td {
+        font-size: 10pt;
+        font-weight: bold;
+        padding:0 20px 0 20px;
+    }
+    h3 {
+        font-size: 10pt;
+        color: white;
+        margin-left: 10px;
+    }
+    tr.first{
+            color: $text-color-white-0-8;
+    }
+    tr.second {
+        color: $text-color-white-0-6;
+    }
+    tr.third {
+        color: $text-color-white-0-4; 
+    }
+    color: $text-color-white-0-4;
+}
+
+.conky-menu__memory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $bg-default-0-6;
+    p {
+        color: $bg-default-0-1;
+        margin-left: 9.5rem;
+        z-index: 10;
+        position: relative;
+    }
+}
+
+.conky-menu__memory__table {
+    display: flex;
+    justify-content: center;
+}
+
+.conky-menu__memory__graph {
+    height: 4.5rem;
+    p {
+        color: white;
+    }
+}
+
+.conky-bottom-border {
+    background: $bg-default-0-4;
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+
+.conky-memory-graph {
+    width: 5rem;
+    height: 5rem;
+    background: url('../public/images/conky-sidebar/graph.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    position: relative;
+    right: -8rem;
+    bottom: 3.8rem;
+}

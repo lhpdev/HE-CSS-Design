@@ -1,0 +1,50 @@
+.bottom-menu-section {
+  padding-top: 2.5rem;
+  justify-self: center;
+  margin: 10px;
+  width: 36rem;
+  height: 4rem;
+  display: grid;
+  grid-template-columns: [column-1-start] 1rem [column-1-end column-2-start] auto [column-2-end column-3-start] 1rem [column-3-end];
+  grid-template-rows: 100%;
+  z-index: 2;
+}
+
+.bottom-menu__left-border {
+  background: rgba(23, 196, 230, 0.5);
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.bottom-menu__content {
+  background: rgba(23, 196, 230, 0.3);
+  grid-row: 1/2;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-menu__content span {
+  padding-left: 1.5rem;
+}
+
+.bottom-menu__right-border {
+  background: rgba(23, 196, 230, 0.5);
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+
+.terminal-icon {
+  opacity: 0.7;
+  width: 3rem;
+  height: 3rem;
+  background: url("../public/images/bottom-menu/terminal-icon.png");
+  background-repeat: no-repeat;
+}
+.terminal-icon:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=bottom-menu.css.map */

@@ -1,0 +1,42 @@
+.button-close {
+  background: none;
+  color: orange;
+  font-weight: bold;
+  border: none;
+  font-size: 12pt;
+}
+.button-close:hover {
+  background: rgba(23, 196, 230, 0.3);
+}
+
+.button-minimize {
+  background: none;
+  color: rgba(23, 196, 230, 0.7);
+  font-weight: bold;
+  border: none;
+  font-size: 12pt;
+}
+.button-minimize:hover {
+  background: rgba(23, 196, 230, 0.3);
+}
+
+.form-button {
+  color: rgba(255, 255, 255, 0.781);
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.2rem;
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  background: rgba(23, 196, 230, 0.3);
+}
+.form-button:hover {
+  background: rgba(23, 196, 230, 0.7);
+  box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.507);
+  cursor: pointer;
+}
+.form-button:active {
+  background: rgba(23, 196, 230, 0.5);
+}
+
+/*# sourceMappingURL=buttons.css.map */
