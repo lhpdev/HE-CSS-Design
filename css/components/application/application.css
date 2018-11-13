@@ -4,8 +4,8 @@
   background-color: rgba(23, 196, 230, 0.3);
   height: 31rem;
   width: 45rem;
-  border-left: 1.2rem solid rgba(23, 196, 230, 0.7);
-  border-right: 1.2rem solid rgba(23, 196, 230, 0.7);
+  border-left: 1rem solid rgba(23, 196, 230, 0.7);
+  border-right: 1rem solid rgba(23, 196, 230, 0.7);
   visibility: visible;
 }
 
@@ -15,8 +15,8 @@
   background-color: rgba(23, 196, 230, 0.3);
   height: 22rem;
   width: 35rem;
-  border-left: 1.2rem solid rgba(23, 196, 230, 0.7);
-  border-right: 1.2rem solid rgba(23, 196, 230, 0.7);
+  border-left: 1rem solid rgba(23, 196, 230, 0.7);
+  border-right: 1 solid rgba(23, 196, 230, 0.7);
   visibility: visible;
 }
 
@@ -26,8 +26,8 @@
   background-color: rgba(23, 196, 230, 0.3);
   height: 17rem;
   width: 25rem;
-  border-left: 1.2rem solid rgba(23, 196, 230, 0.7);
-  border-right: 1.2rem solid rgba(23, 196, 230, 0.7);
+  border-left: 1 solid rgba(23, 196, 230, 0.7);
+  border-right: 1rem solid rgba(23, 196, 230, 0.7);
   visibility: visible;
 }
 
@@ -117,9 +117,13 @@
 }
 
 .app__active-ip {
-  background: rgba(255, 255, 255, 0.4);
-  font-size: 9pt;
-  width: 5rem;
+  position: relative;
+  top: -2px;
+  margin-left: 0.4rem;
+  background: rgba(255, 255, 255, 0.253);
+  border: 1px solid rgba(255, 255, 255, 0.473);
+  font-size: 10pt;
+  width: 6rem;
   text-align: center;
   color: #e7e7e7;
 }

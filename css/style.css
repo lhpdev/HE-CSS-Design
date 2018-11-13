@@ -4,8 +4,8 @@
   background-color: rgba(23, 196, 230, 0.3);
   height: 31rem;
   width: 45rem;
-  border-left: 1.2rem solid rgba(23, 196, 230, 0.7);
-  border-right: 1.2rem solid rgba(23, 196, 230, 0.7);
+  border-left: 1rem solid rgba(23, 196, 230, 0.7);
+  border-right: 1rem solid rgba(23, 196, 230, 0.7);
   visibility: visible;
 }
 
@@ -15,8 +15,8 @@
   background-color: rgba(23, 196, 230, 0.3);
   height: 22rem;
   width: 35rem;
-  border-left: 1.2rem solid rgba(23, 196, 230, 0.7);
-  border-right: 1.2rem solid rgba(23, 196, 230, 0.7);
+  border-left: 1rem solid rgba(23, 196, 230, 0.7);
+  border-right: 1 solid rgba(23, 196, 230, 0.7);
   visibility: visible;
 }
 
@@ -26,8 +26,8 @@
   background-color: rgba(23, 196, 230, 0.3);
   height: 17rem;
   width: 25rem;
-  border-left: 1.2rem solid rgba(23, 196, 230, 0.7);
-  border-right: 1.2rem solid rgba(23, 196, 230, 0.7);
+  border-left: 1 solid rgba(23, 196, 230, 0.7);
+  border-right: 1rem solid rgba(23, 196, 230, 0.7);
   visibility: visible;
 }
 
@@ -117,9 +117,13 @@
 }
 
 .app__active-ip {
-  background: rgba(255, 255, 255, 0.4);
-  font-size: 9pt;
-  width: 5rem;
+  position: relative;
+  top: -2px;
+  margin-left: 0.4rem;
+  background: rgba(255, 255, 255, 0.253);
+  border: 1px solid rgba(255, 255, 255, 0.473);
+  font-size: 10pt;
+  width: 6rem;
   text-align: center;
   color: #e7e7e7;
 }
@@ -204,6 +208,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  border-left: 1rem solid rgba(23, 196, 230, 0.5);
+  border-right: 1rem solid rgba(23, 196, 230, 0.5);
 }
 .bottom-menu__content span {
   padding-left: 1.5rem;
@@ -282,24 +288,14 @@
   display: grid;
   justify-self: end;
   grid-template-columns: 100%;
-  grid-template-rows: [row-1-start] 1rem [row-1-end row-2-start] auto [row-2-end row-3-start] 1rem [row-3-end];
+  grid-template-rows: 100%;
   z-index: 2;
-}
-
-.conky__top-border {
-  background: rgba(23, 196, 230, 0.5);
-  grid-row: 1/2;
-  grid-column: 1/2;
+  border-top: 1rem solid rgba(23, 196, 230, 0.5);
+  border-bottom: 1rem solid rgba(23, 196, 230, 0.5);
 }
 
 .conky__content {
-  grid-row: 2/3;
-  grid-column: 1/2;
-}
-
-.conky__bottom-border {
-  background: rgba(23, 196, 230, 0.5);
-  grid-row: 3/4;
+  grid-row: 1/2;
   grid-column: 1/2;
 }
 
@@ -1026,23 +1022,18 @@
   display: grid;
   width: 13rem;
   height: 3.5rem;
-  grid-template-columns: [column-1-start] 1rem [column-1-end column-2-start] 1fr [column-2-end column-3-start] 1fr [column-3-end];
+  grid-template-columns: [column-1-end column-2-start] 1fr [column-2-end column-3-start] 1fr [column-3-end];
   grid-template-rows: 100%;
   justify-self: left;
 }
 
-.left-panel__left-border {
-  background: rgba(23, 196, 230, 0.5);
-  grid-row: 1/2;
-  grid-column: 1/2;
-}
-
 .left-panel__first_half {
   grid-row: 1/2;
-  grid-column: 2/3;
+  grid-column: 1/2;
   display: grid;
   grid-template-columns: [column-1-start] 1fr [column-1-end column-2-start] 1rem [column-2-end];
   grid-template-rows: 100%;
+  border-left: 1rem solid rgba(23, 196, 230, 0.5);
 }
 
 .left-panel__first_half_left {
@@ -1076,7 +1067,7 @@
 
 .left-panel__second_half {
   grid-row: 1/2;
-  grid-column: 3/4;
+  grid-column: 2/3;
   display: grid;
   grid-template-columns: [column-1-start] 1fr [column-1-end column-2-start] 1rem [column-2-end];
   grid-template-rows: 100%;
@@ -1434,7 +1425,7 @@ body {
   display: grid;
   width: 13rem;
   height: 3.5rem;
-  grid-template-columns: [column-1-start] 1fr [column-1-end column-2-start] 1fr [column-2-end column-3-start] 1rem [column-3-end];
+  grid-template-columns: [column-1-start] 1fr [column-1-end column-2-start] 1fr [column-2-end column-3-start];
   grid-template-rows: 100%;
   justify-self: right;
 }
@@ -1504,13 +1495,6 @@ body {
   grid-column: 1/2;
 }
 
-.right-panel__second_half_left_top #left-panel-clock {
-  width: 3rem;
-  background: rgba(23, 196, 230, 0.5);
-  border-radius: 3px;
-  margin: 2px;
-}
-
 .right-panel__second_half_left_bottom {
   background: linear-gradient(51deg, rgba(255, 0, 0, 0) 40%, rgba(23, 196, 230, 0.3) 0%);
   grid-row: 2/3;
@@ -1527,6 +1511,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  border-right: 1rem solid rgba(23, 196, 230, 0.5);
 }
 
 .right-panel__second_half_right p {
@@ -1536,12 +1521,6 @@ body {
 
 .right-panel__second_half_right:hover {
   cursor: pointer;
-}
-
-.right-panel__right-border {
-  background: rgba(23, 196, 230, 0.5);
-  grid-row: 1/2;
-  grid-column: 3/4;
 }
 
 .notifications-content {
