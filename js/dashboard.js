@@ -2,45 +2,45 @@
 //Selectors:
 
 //Main
-var document = document.querySelector('.main-screen');
+var document = document.querySelector('.screen--main');
 
 //LeftPannel
 //...
 
 //Header
-var gatewayIcon = document.querySelector(".header-gateway");
+var gatewayIcon = document.querySelector(".header__gateway");
 var gatewayIp = document.querySelector('#gateway-ip');
-var gatewaySection = document.querySelector('.gateway-section');
-var gatewayIpHover = document.querySelector('.gateway-ip-hover');
-var gatewayDropDownList = document.querySelector('.gateway-dropdown-list');
+var gatewaySection = document.querySelector('.gateway__section');
+var gatewayIpHover = document.querySelector('.gateway-ip--hover');
+var gatewayDropDownList = document.querySelector('.gateway__dropdown-list');
 
-var connectionLeft = document.querySelector(".header-connection-left");
+var connectionLeft = document.querySelector(".header__connection--left");
 
-var bouncingCreate = document.querySelector('#bouncing-create');
-var bouncingCreateSection = document.querySelector('.bouncing-create-section');
-var bouncingDropDownList = document.querySelector('.bouncing-dropdown-list');
-var bouncingIcon = document.querySelector(".header-bouncing");
-var bouncingHover = document.querySelector('.bouncing-hover');
+var bouncingCreate = document.querySelector('#bouncing__create');
+var bouncingCreateSection = document.querySelector('.bouncing__create-section');
+var bouncingDropDownList = document.querySelector('.bouncing__dropdown-list');
+var bouncingIcon = document.querySelector(".header__bouncing");
+var bouncingHover = document.querySelector('.bouncing--hover');
 
-var connectionRight = document.querySelector(".header-connection-right");
+var connectionRight = document.querySelector(".header__connection--right");
 
-var serverIcon = document.querySelector(".header-server");
+var serverIcon = document.querySelector(".header__server");
 var serverIp = document.querySelector('#server-ip');
-var serverIpHover = document.querySelector('.server-ip-hover');
-var serverSection = document.querySelector('.server-section');
-var serverIpDropDownList = document.querySelector('.server-ip-dropdown-list');
+var serverIpHover = document.querySelector('.server-ip--hover');
+var serverSection = document.querySelector('.server__section');
+var serverIpDropDownList = document.querySelector('.server-ip__dropdown-list');
 
 //RightPanel
-var notificationsGlobalIcon = document.querySelector(".notification-main");
-var notificationsPool = document.querySelector(".notification__pool-container");
+var notificationsGlobalIcon = document.querySelector(".notification__toggle--main");
+var notificationsPool = document.querySelector(".notification__dropdown-list");
 
 //LogViewer
 var logViewerApplication = document.querySelector('#logviewer');
-var logViewerApplicationCloseButton = document.querySelector('#logviewer .button-close');
+var logViewerApplicationCloseButton = document.querySelector('#logviewer .app__top-bar__button--close');
 
 //Messenger
 var messengerApplication = document.querySelector('#messenger');
-var messengerApplicationCloseButton = document.querySelector('#messenger .button-close');
+var messengerApplicationCloseButton = document.querySelector('#messenger .app__top-bar__button--close');
 
 //BottomMenu
 var terminalIconOne = document.querySelector("#one");

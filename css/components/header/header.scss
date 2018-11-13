@@ -16,7 +16,7 @@
     border-right: 1rem solid $bg-default-0-4;
 }
 
-.gateway-section {
+.gateway__section {
     width: 6rem;
     height: 5rem;
     display: flex;
@@ -46,7 +46,7 @@
     z-index: 2;
 }
 
-.server-section {
+.server__section {
     width: 6rem;
     height: 5rem;
     display: flex;
@@ -75,7 +75,7 @@
     z-index: 2;
 }
 
-.header-gateway {
+.header__gateway {
     background: url('../public/images/header/header-center/pc-icon.png');
     background-repeat: no-repeat;
     opacity: 0.7;
@@ -88,7 +88,7 @@
     }
 }
 
-.header-connection-left {
+.header__connection--left {
     background: url('../public/images/header/header-center/connection.png');
     opacity: 0.7;
     background-repeat: no-repeat;
@@ -98,7 +98,7 @@
 
 }
 
-.header-bouncing {
+.header__bouncing {
     background: url('../public/images/header/header-center/bouncing-icon.png');
     opacity: 0.5;
     background-repeat: no-repeat;
@@ -107,7 +107,7 @@
     height: 2.5rem;
 }
 
-.header-connection-right {
+.header__connection--right {
     background: url('../public/images/header/header-center/connection.png');
     opacity: 0.7;
     background-repeat: no-repeat;
@@ -118,7 +118,7 @@
     margin-top: 0.85rem;
 }
 
-.header-server {
+.header__server {
     background: url('../public/images/header/header-center/pc-icon.png');
     opacity: 0.7;
     background-repeat: no-repeat;
@@ -130,11 +130,11 @@
     }
 }
 
-.header-connection-left:hover,
-.header-bouncing:hover,
-.header-connection-right:hover,
-.header-server:hover,
-.header-gateway:hover {
+.header__connection--left:hover,
+.header__bouncing:hover,
+.header__connection--right:hover,
+.header__server:hover,
+.header__gateway:hover {
     opacity: 0.7;
     cursor: pointer;
 }

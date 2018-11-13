@@ -13,7 +13,7 @@
   border-right: 1rem solid rgba(23, 196, 230, 0.5);
 }
 
-.gateway-section {
+.gateway__section {
   width: 6rem;
   height: 5rem;
   display: flex;
@@ -24,7 +24,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   z-index: 2;
 }
-.gateway-section p {
+.gateway__section p {
   opacity: 0.8;
   font-weight: bold;
   text-shadow: 1px 2px black;
@@ -35,15 +35,15 @@
   opacity: 1;
   font-size: 10pt;
 }
-.gateway-section p:hover {
+.gateway__section p:hover {
   opacity: 1;
   cursor: pointer;
 }
-.gateway-section:hover {
+.gateway__section:hover {
   cursor: pointer;
 }
 
-.server-section {
+.server__section {
   width: 6rem;
   height: 5rem;
   display: flex;
@@ -54,7 +54,7 @@
   background-color: rgba(255, 255, 255, 0);
   z-index: 2;
 }
-.server-section p {
+.server__section p {
   font-size: 10pt;
   opacity: 0.8;
   font-weight: bold;
@@ -64,15 +64,15 @@
   color: white;
   text-align: center;
 }
-.server-section p:hover {
+.server__section p:hover {
   opacity: 1;
   cursor: pointer;
 }
-.server-section:hover {
+.server__section:hover {
   cursor: pointer;
 }
 
-.header-gateway {
+.header__gateway {
   background: url("../public/images/header/header-center/pc-icon.png");
   background-repeat: no-repeat;
   opacity: 0.7;
@@ -80,12 +80,12 @@
   width: 4rem;
   height: 4rem;
 }
-.header-gateway:hover {
+.header__gateway:hover {
   opacity: 1;
   cursor: pointer;
 }
 
-.header-connection-left {
+.header__connection--left {
   background: url("../public/images/header/header-center/connection.png");
   opacity: 0.7;
   background-repeat: no-repeat;
@@ -94,7 +94,7 @@
   height: 1.3rem;
 }
 
-.header-bouncing {
+.header__bouncing {
   background: url("../public/images/header/header-center/bouncing-icon.png");
   opacity: 0.5;
   background-repeat: no-repeat;
@@ -103,7 +103,7 @@
   height: 2.5rem;
 }
 
-.header-connection-right {
+.header__connection--right {
   background: url("../public/images/header/header-center/connection.png");
   opacity: 0.7;
   background-repeat: no-repeat;
@@ -114,7 +114,7 @@
   margin-top: 0.85rem;
 }
 
-.header-server {
+.header__server {
   background: url("../public/images/header/header-center/pc-icon.png");
   opacity: 0.7;
   background-repeat: no-repeat;
@@ -122,15 +122,15 @@
   width: 4rem;
   height: 4rem;
 }
-.header-server:hover {
+.header__server:hover {
   cursor: pointer;
 }
 
-.header-connection-left:hover,
-.header-bouncing:hover,
-.header-connection-right:hover,
-.header-server:hover,
-.header-gateway:hover {
+.header__connection--left:hover,
+.header__bouncing:hover,
+.header__connection--right:hover,
+.header__server:hover,
+.header__gateway:hover {
   opacity: 0.7;
   cursor: pointer;
 }

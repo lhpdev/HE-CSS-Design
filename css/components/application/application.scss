@@ -1,17 +1,17 @@
 @import "../../variables.scss";
 
-.app-large {
+.app__window--large {
  display: flex;
  flex-direction: column;
  background-color: $bg-default-0-2;
- height: 30rem;
+ height: 31rem;
  width: 45rem;
  border-left: 1.2rem solid $bg-default-0-6;
  border-right: 1.2rem solid $bg-default-0-6;
  visibility: visible;
 }
 
-.app-medium {
+.app__window--medium {
 	display: flex;
 	flex-direction: column;
 	background-color: $bg-default-0-2;
@@ -22,7 +22,7 @@
 	visibility: visible;
    }
 
-.app-small {
+.app__window--small {
 	display: flex;
 	flex-direction: column;
 	background-color: $bg-default-0-2;
@@ -36,15 +36,15 @@
 .app__header {
 	display: flex;
 	justify-content: space-between;
-	height: 2rem;
+	height: 1.8rem;
 	margin-left: 6px;
 	margin-right: 6px;
 	padding-bottom: 3px;
 	border-bottom: 2px solid $bg-default-0-6;
 }
 
-.app__header-left,
-.app__header-right {
+.app__header--left,
+.app__header--right {
 	display: flex;
 	align-items: flex-end;
 }
@@ -59,7 +59,7 @@
 	height: 100%;
 }
 
-.search_filtered {
+.feature__search-filtered {
 	display: flex;
 	justify-content: flex-end;
 }
@@ -98,7 +98,8 @@
 }
 
 .app-iframe {
-	margin-top: 1rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.7rem;
 	border: none;
 	opacity: 0.8;
 	height: 22rem;
@@ -124,6 +125,7 @@
     text-align: center;
     color: rgb(231, 231, 231);
 }
+
 /* width */
 ::-webkit-scrollbar {
 	width: 8px;

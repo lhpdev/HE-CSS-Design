@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-.button-close {
+.app__top-bar__button--close {
 	background: none;
 	color: orange;
 	font-weight: bold;
@@ -11,7 +11,7 @@
 	}
 }
 
-.button-minimize {
+.app__top-bar__button--minimize {
 	background: none;
 	color: $bg-default-0-6;
 	font-weight: bold;
@@ -25,7 +25,7 @@
 .form-button {
     color: rgba(255, 255, 255, 0.781);
     font-weight: bold;
-    margin-top: 1rem;
+    margin: 0.2rem;
     padding: 0.2rem;
     width: 5rem;
     height: 2rem;
@@ -39,4 +39,9 @@
     &:active {
       background: $bg-default-0-4;
     }
+  }
+
+  .app-bottom-button {
+    margin-left: 1rem;
+    color: orange;
   }
