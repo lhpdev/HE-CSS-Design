@@ -1,116 +1,99 @@
 @import "../../_variables.scss";
 
-.notification__dropdown-list {
+
+#notifications {
     position: absolute;
     z-index: 10;
-    height: 13rem;
-    width: 15rem;
     right: 9rem;
     top: 1.7rem;
     visibility: visible;
+    width: 18rem;
+}
+
+.pool-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.685);
 }
 
-.notification__top-border {
-    background: $bg-default-0-6;
+.pool__label {
+    background: rgba(37, 107, 121, 0.788);
+    height: 1.3rem;
     width: 100%;
-    height: 0.7rem;
-}
-
-.notification__content {
-    background: $bg-default-0-4;
-    width: 100%;
-    height: 11.6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.notification__content__header {
-    background-color: rgba(59, 59, 59, 0.7);
-    height: 0.8rem;
-    width: 98%;
-    // margin: 1.8px;
-    color: orange;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    p {
+        padding-left: 0.5rem;
+        color: orange;
+        font-size: 8pt;
+        font-weight: 800;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    span {
+        color: white;
+    }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-.notification__label {
+.pool-additional-label {
+    background-color: rgba(0, 0, 0, 0.74);
+    width: 100%;
+    height: 1.5rem;
     font-size: 6.5pt;
-    z-index: 50;
     margin: 0;
-    margin-left: 0.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+        padding-left: 0.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
-.notification__toggle {
+.toggle-title {
     font-size: 4pt;
     margin-right: 3rem;
     color: white;
     font-size: 6.5pt;
 }
 
-.notification__content__gap {
-    background-color: rgba(59, 59, 59, 0.5);
-    height: 1.2rem;
-    width: 98%;
-    margin: 0;
-    color: white;
-    font-size: 8pt;
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    p {
-        margin-left: 0.5rem;
-    }
-}
-
-.notification__content__list {
-    background-color: rgba(58, 58, 58, 0.512);
-    width: 98%;
-    height: 8rem;
+.pool__dropdown-list {
+    background-color: rgba(49, 49, 49, 0.664);
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: space-between;
+    align-items: center;
     justify-content: center;
 }
 
-.notification {
-    background-color: rgba(31, 30, 30, 0.4);
-    width: 100%;
-    height: 1.9rem;
+.pool-item {
+    width: 94%;
+    padding-left: 0.5rem;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    justify-content: left;
     align-items: center;
-    color: rgb(168, 168, 168);
-    font-size: 8pt;
+    font-size: 8.5pt;
+    height: 3rem;
+    border-bottom: 2px solid $bg-default-0-6;
+    color: rgba(255, 255, 255, 0.737);
     &:hover {
-        background-color: rgba(83, 83, 83, 0.4); 
+        background-color: rgba(128, 128, 128, 0.436);
         cursor: pointer;
+        color: white;
     }
-    p,
-    span {
-        margin-left: 0.5rem;
+    p {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        padding-left: 1rem;
     }
 }
 
-.notification__bottom-border {
-    background: $bg-default-0-6;
-    width: 100%;
-    height: 0.7rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: orange;
-    text-shadow: 0.5px 0.5px 0.5px  rgba(0, 0, 0, 0.795);
-    font-size: 8pt;
-}

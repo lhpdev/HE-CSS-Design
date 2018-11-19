@@ -36,56 +36,11 @@
     grid-area: conky;
 }
 
-.gateway__dropdown-list {
-    background-color: $bg-default-0-6;
+#gateway__dropdown-list {
     position: absolute;
     top: 7rem;
     left: 29.5%;
-    width: 9rem;
-    height: 6rem;
     visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    color: rgb(158, 158, 158);
-    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.32), 0px 0px 0px 0px rgba(255,255,255,0.5);
-}
-
-.gateway__dropdown-list__content {
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-
-.gateway__dropdown-list__item {
-    background-color: rgba(48, 48, 48, 0.781);
-    width: 98%;
-    margin: 0.1rem;
-    p {
-        height: 1.2rem;
-        font-weight: bold;
-        text-shadow: 1px 0px rgba(0, 0, 0, 0.795);
-        font-size: 9.5pt;
-        margin: 0;
-        text-align: center;
-    }
-    &:hover {
-        background-color: rgba(71, 71, 71, 0.578);
-        cursor: pointer;
-        p {
-            color: orange;
-        }
-    }
-    z-index: 2;
 }
 
 .server-ip--hover {
@@ -161,24 +116,14 @@
     }
 }
 
-.bouncing__dropdown-list {
-    background-color: $bg-default-0-6;
+#bouncing__dropdown-list {
     position: absolute;
     top: 6rem;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    width: 9rem;
-    height: 7rem;
     visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-    color: rgb(158, 158, 158);
-    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.32), 0px 0px 0px 0px rgba(255,255,255,0.5);
 }
 
 .bouncing__dropdown-list__content {
@@ -233,21 +178,37 @@
     border: 2px rgba(255, 255, 255, 0.438) solid;
 }
 
-.server-ip__dropdown-list {
-    background-color: $bg-default-0-6;
+#server-ip__dropdown-list {
     position: absolute;
     top: 7rem;
     left: 62%;
-    width: 9rem;
-    height: 6rem;
     visibility: hidden;
+}
+
+.pool-container--ip {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 3;
-    color: rgb(158, 158, 158);
-    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.32), 0px 0px 0px 0px rgba(255,255,255,0.5);
+    width: 9rem;
+    .pool__dropdown-list {
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+    .pool-item{
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        p {
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+    .pool-item:last-child {
+        border-bottom: none;
+    }
 }
 
 .server-ip__dropdown-list__content {
@@ -336,7 +297,9 @@
 
 #messenger {
     position: absolute;
-    z-index: 10;
+    top: 250px;
+    left: 250px;
+    z-index: 9;
 }
 
 #messengerheader {
