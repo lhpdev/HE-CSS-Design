@@ -12,13 +12,13 @@ var gatewayIcon = document.querySelector(".header__gateway");
 var gatewayIp = document.querySelector('#gateway-ip');
 var gatewaySection = document.querySelector('.gateway__section');
 var gatewayIpHover = document.querySelector('.gateway-ip--hover');
-var gatewayDropDownList = document.querySelector('.gateway__dropdown-list');
+var gatewayDropDownList = document.querySelector('#gateway__dropdown-list');
 
 var connectionLeft = document.querySelector(".header__connection--left");
 
 var bouncingCreate = document.querySelector('#bouncing__create');
 var bouncingCreateSection = document.querySelector('.bouncing__create-section');
-var bouncingDropDownList = document.querySelector('.bouncing__dropdown-list');
+var bouncingDropDownList = document.querySelector('#bouncing__dropdown-list');
 var bouncingIcon = document.querySelector(".header__bouncing");
 var bouncingHover = document.querySelector('.bouncing--hover');
 
@@ -28,11 +28,11 @@ var serverIcon = document.querySelector(".header__server");
 var serverIp = document.querySelector('#server-ip');
 var serverIpHover = document.querySelector('.server-ip--hover');
 var serverSection = document.querySelector('.server__section');
-var serverIpDropDownList = document.querySelector('.server-ip__dropdown-list');
+var serverIpDropDownList = document.querySelector('#server-ip__dropdown-list');
 
 //RightPanel
 var notificationsGlobalIcon = document.querySelector(".notification__toggle--main");
-var notificationsPool = document.querySelector(".notification__dropdown-list");
+var notificationsPool = document.querySelector("#notifications");
 
 //LogViewer
 var logViewerApplication = document.querySelector('#logviewer');
