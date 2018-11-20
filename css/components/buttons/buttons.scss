@@ -24,16 +24,20 @@
 
 .form-button {
     color: rgba(255, 255, 255, 0.781);
-    font-weight: bold;
     margin: 0.2rem;
     padding: 0.2rem;
     width: 5rem;
     height: 2rem;
     border: none;
     background: $bg-default-0-2;
+    font-size: 11pt;
+    p {
+      margin-top: 0rem;
+      margin-bottom: 0rem;
+    }
     &:hover {
       background: $bg-default-0-6;
-      box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.507);
+      box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.307);
       cursor: pointer;
     }
     &:active {
@@ -44,4 +48,34 @@
   .app-bottom-button {
     margin-left: 1rem;
     color: orange;
+    font-size: 20pt;
+    &:hover {
+      color: rgb(255, 123, 0);
+    }
+  }
+
+  .btn-orange {
+    background:  rgb(202, 100, 4);
+    color: rgb(1, 42, 54);
+    font-weight: bold;
+    width: 7rem;
+    &:hover {
+      background:  rgb(255, 123, 0);
+    }
+  }
+
+  .btn-dark {
+    background: $bg-default-0-4;
+    color: rgb(1, 42, 54);
+    font-weight: bold;
+    width: 7rem;
+  }
+
+  .send-button {
+    width: 1.7rem;
+    height: 1.7rem;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
   }

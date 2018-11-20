@@ -33,12 +33,23 @@
 	visibility: visible;
 }
 
+.app__window--medium--vertical {
+	display: flex;
+	flex-direction: column;
+	background-color: $bg-default-0-2;
+	height: 26rem;
+	width: 17rem;
+	border-top: 1rem solid $bg-default-0-6;
+	border-bottom: 1rem solid $bg-default-0-6;
+	visibility: visible;
+}
+
 .app__header {
 	display: flex;
 	justify-content: space-between;
 	height: 1.8rem;
-	margin-left: 6px;
-	margin-right: 6px;
+	margin-left: 4px;
+	margin-right: 4px;
 	padding-bottom: 3px;
 	border-bottom: 2px solid $bg-default-0-6;
 }
@@ -47,6 +58,10 @@
 .app__header--right {
 	display: flex;
 	align-items: flex-end;
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }
 
 .app__icon {

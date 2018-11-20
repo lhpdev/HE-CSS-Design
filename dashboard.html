@@ -217,11 +217,11 @@
         <span id="five" class="terminal-icon"></span>
       </div>
     </div>
-    <div class="app__window--large" id="messenger">
-      <div class="app__header" id="messengerheader" >
+    <div class="app__window--large" id="database">
+      <div class="app__header" id="databaseheader" >
         <div class="app__header--left">
-            <img src="./public/images/logviewer/logviewer-icon.png" alt="messenger-icon" class="app__icon"/>
-            <h3 class="app__title">Messenger</h3>
+            <img src="./public/images/logviewer/logviewer-icon.png" alt="database-icon" class="app__icon"/>
+            <h3 class="app__title">Database</h3>
         </div>
         <div class="app__header--right">
           <button class="app__top-bar__button--minimize">-</button>
@@ -241,13 +241,13 @@
           <h3 class="app__tab-title">BTC WALLETS</h3>
           <h3 class="app__tab-title">BANK ACCOUNTS</h3>
         </div>
-        <iframe style="height: 23rem" class="app-iframe" src="log_viewer.html"></iframe>
+        <iframe style="height: 23rem" class="app-iframe" src="./iframe-pages/log_viewer.html"></iframe>
       </div>
     </div>
     <div class="app__window--large" id="logviewer">
       <div class="app__header" id="logviewerheader">
         <div class="app__header--left">
-          <img src="./public/images/logviewer/logviewer-icon.png" alt="logviewe-icon" class="app__icon"/>
+          <img src="./public/images/logviewer/logviewer-icon.png" alt="logviewer-icon" class="app__icon"/>
           <h3 class="app__title">LogViewer</h3>
           <label class="app__active-ip" id="ip-loviewer">192.68.1.1</label>
         </div>
@@ -264,12 +264,44 @@
           <img src="./public/images/logviewer/deep-filter-icon.png" alt="deep" class="filter_option" id="deep"/>
           <input type="text" name="search" placeholder="Search" class="search_input" >
         </div>
-        <iframe class="app-iframe" src="log_viewer.html"></iframe>
-        <div class="logviewer__bottom_options">
-          <button class="form-button app-bottom-button">+</button>
+        <iframe class="app-iframe" src="./iframe-pages/log_viewer.html"></iframe>
+        <div class="app__content__bottom_options">
+          <button class="form-button app-bottom-button"><p>+</p></button>
         </div>
       </div>
-    </div> 
+    </div>
+    <div class="app__window--small" id="npc-messenger">
+      <div class="app__header" id="npc-messengerheader">
+        <div class="app__header--left">
+          <span class="user-profile-icon"></span>
+          <h3>Jarvis</h3>
+        </div>
+        <div class="app__header--right">
+          <button class="app__top-bar__button--minimize">-</button>
+          <button class="app__top-bar__button--close">X</button>
+        </div>
+      </div>
+      <iframe style="height: 10rem" class="app-iframe" src="./iframe-pages/messages.html"></iframe>
+      <div class="reply-message-container">
+        <button class="form-button btn-orange">Yes!</button>
+        <button class="form-button btn-dark">No!</button>
+        <img class="send-button" src="./public/images/npc-messenger/send-button.png" alt="send-button"></img>
+      </div>
+    </div>
+    <div class="app__window--medium--vertical" id="contacts">
+      <div class="app__header" id="contactsheader">
+        <div class="app__header--left">
+            <img src="./public/images/logviewer/logviewer-icon.png" alt="logviewer-icon" class="app__icon"/>
+            <h3 class="app__title">Contacts</h3>
+        </div>
+        <div class="app__header--right">
+          <button class="app__top-bar__button--minimize">-</button>
+          <button class="app__top-bar__button--close">X</button>
+        </div> 
+      </div>
+      <input type="text" name="search" placeholder="Search" class="search_input" >
+      <iframe style="height: 34rem" class="app-iframe" src="./iframe-pages/contacts_list.html"></iframe>
+    </div>
   </div>
   <script src="./js/dashboard.js"></script>
   <script>

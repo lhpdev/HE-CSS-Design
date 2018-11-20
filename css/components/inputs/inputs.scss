@@ -17,3 +17,12 @@
       background: rgba(187, 187, 187, 0.267);;
     }
   }
+
+  .reply-message-container {
+    background-color: rgba(6, 28, 34, 0.568);
+    margin: 0.15rem 0.1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+  }

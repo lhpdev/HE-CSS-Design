@@ -38,9 +38,17 @@ var notificationsPool = document.querySelector("#notifications");
 var logViewerApplication = document.querySelector('#logviewer');
 var logViewerApplicationCloseButton = document.querySelector('#logviewer .app__top-bar__button--close');
 
-//Messenger
-var messengerApplication = document.querySelector('#messenger');
-var messengerApplicationCloseButton = document.querySelector('#messenger .app__top-bar__button--close');
+//database
+var databaseApplication = document.querySelector('#database');
+var databaseApplicationCloseButton = document.querySelector('#database .app__top-bar__button--close');
+
+//Contacts
+var contactsApplication = document.querySelector('#contacts');
+var contactsApplicationCloseButton = document.querySelector('#contacts .app__top-bar__button--close');
+
+//npc-messenger 
+var npcMessengerApplication = document.querySelector('#npc-messenger');
+var npcMessengerApplicationCloseButton = document.querySelector('#npc-messenger .app__top-bar__button--close');
 
 //BottomMenu
 var terminalIconOne = document.querySelector("#one");
@@ -73,16 +81,22 @@ var gateway_clicked = false;
 
 var terminalIconOne_clicked = false;
 var terminalIconTwo_clicked = false;
+var terminalIconThree_clicked = false;
+var terminalIconFour_clicked = false;
 
 var notificationsIcon_clicked = false;
 var notificationPoolOpen = false;
 
 var logViewerApplicationOpen = false;
-var messengerApplicationOpen = false;
+var databaseApplicationOpen = false;
+var contactsApplicationOpen = false;
+var npcMessengerApplicationOpen = false;
 
 notificationsPool.style.visibility = 'hidden';
 logViewerApplication.style.visibility = 'hidden';
-messengerApplication.style.visibility = 'hidden';
+databaseApplication.style.visibility = 'hidden';
+contactsApplication.style.visibility = 'hidden';
+npcMessengerApplication.style.visibility = 'hidden';
 
 var current_date = Date();
 
@@ -327,15 +341,53 @@ function checkTime(i) {
             terminalIconTwo.style.backgroundRepeat = "no-repeat";
             terminalIconTwo.style.width = "3rem";
             terminalIconTwo.style.height = "3rem";
-            messengerApplication.style.visibility = "visible";
-            messengerApplicationOpen = true;
+            databaseApplication.style.visibility = "visible";
+            databaseApplicationOpen = true;
         }else {
             terminalIconTwo.style.background = terminalIcon_inactive_path;
             terminalIconTwo.style.backgroundRepeat = "no-repeat";
             terminalIconTwo.style.width = "3rem";
             terminalIconTwo.style.height = "3rem";
-            messengerApplication.style.visibility = "hidden";
-            messengerApplicationOpen = false;
+            databaseApplication.style.visibility = "hidden";
+            databaseApplicationOpen = false;
+        }
+    });
+
+    terminalIconThree.addEventListener("click", function() {
+        terminalIconThree_clicked = !terminalIconThree_clicked;
+        if (terminalIconThree_clicked) {
+            terminalIconThree.style.background = terminalIcon_active_path;
+            terminalIconThree.style.backgroundRepeat = "no-repeat";
+            terminalIconThree.style.width = "3rem";
+            terminalIconThree.style.height = "3rem";
+            contactsApplication.style.visibility = "visible";
+            contactsApplicationOpen = true;
+        }else {
+            terminalIconThree.style.background = terminalIcon_inactive_path;
+            terminalIconThree.style.backgroundRepeat = "no-repeat";
+            terminalIconThree.style.width = "3rem";
+            terminalIconThree.style.height = "3rem";
+            contactsApplication.style.visibility = "hidden";
+            contactsApplicationOpen = false;
+        }
+    });
+
+    terminalIconFour.addEventListener("click", function() {
+        terminalIconFour_clicked = !terminalIconFour_clicked;
+        if (terminalIconFour_clicked) {
+            terminalIconFour.style.background = terminalIcon_active_path;
+            terminalIconFour.style.backgroundRepeat = "no-repeat";
+            terminalIconFour.style.width = "3rem";
+            terminalIconFour.style.height = "3rem";
+            npcMessengerApplication.style.visibility = "visible";
+            npcMessengerApplicationOpen = true;
+        }else {
+            terminalIconFour.style.background = terminalIcon_inactive_path;
+            terminalIconFour.style.backgroundRepeat = "no-repeat";
+            terminalIconFour.style.width = "3rem";
+            terminalIconFour.style.height = "3rem";
+            npcMessengerApplication.style.visibility = "hidden";
+            npcMessengerApplicationOpen = false;
         }
     });
 
@@ -345,14 +397,28 @@ function checkTime(i) {
         logViewerApplication.style.visibility = "hidden";
         terminalIconOne.style.background = terminalIcon_inactive_path;
         terminalIconOne.style.backgroundRepeat = "no-repeat";
-    })
+    });
 
-    messengerApplicationCloseButton.addEventListener("click", function() {
-        messengerApplicationOpen = !logViewerApplicationOpen;
-        messengerApplication.style.visibility = "hidden";
+    databaseApplicationCloseButton.addEventListener("click", function() {
+        databaseApplicationOpen = !databaseApplicationOpen;
+        databaseApplication.style.visibility = "hidden";
         terminalIconTwo.style.background = terminalIcon_inactive_path;
         terminalIconTwo.style.backgroundRepeat = "no-repeat";
-    })
+    });
+
+    contactsApplicationCloseButton.addEventListener("click", function() {
+        contactsApplicationOpen = !contactsApplicationOpen;
+        contactsApplication.style.visibility = "hidden";
+        terminalIconThree.style.background = terminalIcon_inactive_path;
+        terminalIconThree.style.backgroundRepeat = "no-repeat";
+    });
+
+    npcMessengerApplicationCloseButton.addEventListener("click", function() {
+        npcMessengerApplicationOpen = !npcMessengerApplicationOpen;
+        npcMessengerApplication.style.visibility = "hidden";
+        terminalIconFour.style.background = terminalIcon_inactive_path;
+        terminalIconFour.style.backgroundRepeat = "no-repeat";
+    });
 
     terminalIconOne.addEventListener("mouseover", function() {
         terminalIconOne.style.opacity = 0.9;
@@ -360,6 +426,14 @@ function checkTime(i) {
 
     terminalIconTwo.addEventListener("mouseover", function() {
         terminalIconTwo.style.opacity = 0.9;
+    });
+
+    terminalIconThree.addEventListener("mouseover", function() {
+        terminalIconThree.style.opacity = 0.9;
+    });
+
+    terminalIconFour.addEventListener("mouseover", function() {
+        terminalIconFour.style.opacity = 0.9;
     });
 
     terminalIconOne.addEventListener("mouseout", function() {
@@ -374,11 +448,29 @@ function checkTime(i) {
         }
     });
 
+    terminalIconThree.addEventListener("mouseout", function() {
+        if (!terminalIconThree_clicked) {
+            terminalIconThree.style.opacity = 0.7;
+        }
+    });
+
+    terminalIconFour.addEventListener("mouseout", function() {
+        if (!terminalIconFour_clicked) {
+            terminalIconFour.style.opacity = 0.7;
+        }
+    });
+
     const logviewer = "logviewer";
     dragElement(document.getElementById(logviewer));
 
-    const messenger = "messenger";
-    dragElement(document.getElementById(messenger));
+    const database = "database";
+    dragElement(document.getElementById(database));
+
+    const contacts = "contacts";
+    dragElement(document.getElementById(contacts));
+
+    const npcMessenger = "npc-messenger";
+    dragElement(document.getElementById(npcMessenger));
 
     //RightPanel
     notificationsGlobalIcon.addEventListener("click", function() {

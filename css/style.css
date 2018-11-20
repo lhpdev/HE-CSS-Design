@@ -31,12 +31,23 @@
   visibility: visible;
 }
 
+.app__window--medium--vertical {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(23, 196, 230, 0.3);
+  height: 26rem;
+  width: 17rem;
+  border-top: 1rem solid rgba(23, 196, 230, 0.7);
+  border-bottom: 1rem solid rgba(23, 196, 230, 0.7);
+  visibility: visible;
+}
+
 .app__header {
   display: flex;
   justify-content: space-between;
   height: 1.8rem;
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 4px;
+  margin-right: 4px;
   padding-bottom: 3px;
   border-bottom: 2px solid rgba(23, 196, 230, 0.7);
 }
@@ -45,6 +56,11 @@
 .app__header--right {
   display: flex;
   align-items: flex-end;
+}
+.app__header--left h3,
+.app__header--right h3 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .app__icon {
@@ -257,17 +273,21 @@
 
 .form-button {
   color: rgba(255, 255, 255, 0.781);
-  font-weight: bold;
   margin: 0.2rem;
   padding: 0.2rem;
   width: 5rem;
   height: 2rem;
   border: none;
   background: rgba(23, 196, 230, 0.3);
+  font-size: 11pt;
+}
+.form-button p {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
 .form-button:hover {
   background: rgba(23, 196, 230, 0.7);
-  box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.507);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.307);
   cursor: pointer;
 }
 .form-button:active {
@@ -277,6 +297,36 @@
 .app-bottom-button {
   margin-left: 1rem;
   color: orange;
+  font-size: 20pt;
+}
+.app-bottom-button:hover {
+  color: #ff7b00;
+}
+
+.btn-orange {
+  background: #ca6404;
+  color: #012a36;
+  font-weight: bold;
+  width: 7rem;
+}
+.btn-orange:hover {
+  background: #ff7b00;
+}
+
+.btn-dark {
+  background: rgba(23, 196, 230, 0.5);
+  color: #012a36;
+  font-weight: bold;
+  width: 7rem;
+}
+
+.send-button {
+  width: 1.7rem;
+  height: 1.7rem;
+  opacity: 0.6;
+}
+.send-button:hover {
+  opacity: 1;
 }
 
 .conky__section {
@@ -680,14 +730,103 @@
   z-index: 2;
 }
 
-#messenger {
+#contacts-list {
+  height: 30rem;
+}
+#contacts-list .pool-item {
+  height: 4rem;
+}
+#contacts-list .pool-item .user-profile-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+#database {
   position: absolute;
   top: 250px;
   left: 250px;
   z-index: 9;
 }
 
-#messengerheader {
+#npc-messenger {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  z-index: 9;
+}
+#npc-messenger .app__header {
+  margin-top: 0.2rem;
+  border-bottom: none;
+  height: 2rem;
+  align-items: flex-start;
+}
+#npc-messenger .app__header--left {
+  align-items: center;
+}
+#npc-messenger .app-iframe {
+  margin-bottom: 0;
+  opacity: 0.7;
+}
+#npc-messenger .user-profile-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#npc-messengerheader h3 {
+  font-size: 11pt;
+}
+
+#contacts {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  z-index: 15;
+  align-items: center;
+}
+#contacts .app__header {
+  height: 2rem;
+  margin-right: 2px;
+  margin-left: 2px;
+  width: 100%;
+}
+#contacts .search_input {
+  width: 14.5rem;
+  height: 2rem;
+  margin: 0.1rem;
+  margin-right: 0.65rem;
+  border: solid 2px rgba(211, 211, 211, 0.534);
+}
+#contacts .app-iframe {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+#contacts img {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.message-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+.message-preview p {
+  padding-left: 0 !important;
+  font-size: 7pt;
+}
+.message-preview h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#contactsheader {
+  cursor: move;
+  z-index: 16;
+}
+
+#databaseheader {
   cursor: move;
   z-index: 11;
 }
@@ -976,6 +1115,15 @@
 }
 .form-txt-input:hover {
   background: rgba(187, 187, 187, 0.267);
+}
+
+.reply-message-container {
+  background-color: rgba(6, 28, 34, 0.568);
+  margin: 0.15rem 0.1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 4rem;
 }
 
 .left-panel-section {
@@ -1283,6 +1431,9 @@ body {
   justify-content: space-between;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.685);
+}
+.pool-container .pool-item:last-child {
+  border-bottom: none;
 }
 
 .pool__label {
@@ -1690,6 +1841,43 @@ body {
 }
 .app__tab-title:active {
   border-bottom: 3px solid rgba(23, 196, 230, 0.7);
+}
+
+.messages-pool {
+  display: flex;
+  flex-direction: column;
+}
+
+.message_item {
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.message_item p {
+  margin: 0;
+}
+
+.message__timestamp {
+  margin-left: 1rem;
+  width: 4rem;
+  height: 1.5rem;
+  padding: 0 1rem;
+  background: rgba(128, 128, 128, 0.432);
+}
+
+.message__content {
+  padding-left: 0.2rem;
+  width: 18rem;
+  height: 1.5rem;
+}
+
+.message-user strong {
+  color: orange;
+}
+
+.message-npc strong {
+  color: rgba(23, 196, 230, 0.7);
 }
 
 body {

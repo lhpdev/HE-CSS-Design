@@ -288,12 +288,12 @@
   z-index: 2;
 }
 
-#messenger {
+#database {
   position: absolute;
   z-index: 10;
 }
 
-#messengerheader {
+#databaseheader {
   cursor: move;
   z-index: 11;
 }
