@@ -310,6 +310,53 @@
     top: 250px;
     left: 250px;
     z-index: 9;
+    .app-iframe {
+        height: 24rem;
+        margin-bottom: 0;
+    }
+}
+
+#databaseheader {
+    cursor: move;
+    z-index: 11;
+}
+
+#multiplayer-messenger {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    z-index: 15;
+    .app__content {
+        display: flex;
+        .contact-list {
+            margin-top: 0.5rem;
+            width: 16rem;
+            .search_input{
+                margin-left: 0.2rem;
+                width: 14.5rem;
+            }
+        }
+        .messages-container {
+            margin-top: 0.08rem;
+            .app-iframe {
+                margin-bottom: 0.15rem;
+            }
+        }
+    }
+}
+
+#input-multiplayer-messenger {
+    border: none;
+    background: rgba(0, 0, 0, 0.601);
+    width: 100%;
+    height: 2.5rem;
+    color: rgba(255, 255, 255, 0.793);
+    padding-left: 1rem;
+}
+
+#multiplayer-messengerheader {
+    cursor: move;
+    z-index: 16;
 }
 
 #npc-messenger {
@@ -355,7 +402,7 @@
         width: 100%;
     }
     .search_input {
-        width: 14.5rem;
+        width: 14rem;
         height: 2rem;
         margin: 0.1rem;
         margin-right: 0.65rem;
@@ -391,11 +438,6 @@
 #contactsheader {
     cursor: move;
     z-index: 16;
-}
-
-#databaseheader {
-    cursor: move;
-    z-index: 11;
 }
 
 #left-panel-clock {

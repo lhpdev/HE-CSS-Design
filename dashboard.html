@@ -241,7 +241,7 @@
           <h3 class="app__tab-title">BTC WALLETS</h3>
           <h3 class="app__tab-title">BANK ACCOUNTS</h3>
         </div>
-        <iframe style="height: 23rem" class="app-iframe" src="./iframe-pages/log_viewer.html"></iframe>
+        <iframe class="app-iframe" src="./iframe-pages/log_viewer.html"></iframe>
       </div>
     </div>
     <div class="app__window--large" id="logviewer">
@@ -286,6 +286,29 @@
         <button class="form-button btn-orange">Yes!</button>
         <button class="form-button btn-dark">No!</button>
         <img class="send-button" src="./public/images/npc-messenger/send-button.png" alt="send-button"></img>
+      </div>
+    </div>
+    <div class="app__window--large" id="multiplayer-messenger">
+      <div class="app__header" id="multiplayer-messengerheader">
+        <div class="app__header--left">
+          <img src="./public/images/logviewer/logviewer-icon.png" alt="logviewer-icon" class="app__icon"/>
+          <h3 class="app__title">Messenger</h3>
+          <label class="app__active-ip" id="ip-loviewer">192.68.1.1</label>
+        </div>
+        <div class="app__header--right">
+          <button class="app__top-bar__button--minimize">-</button>
+          <button class="app__top-bar__button--close">X</button>
+        </div> 
+      </div>
+      <div class="app__content">
+        <div class="contact-list">
+          <input type="text" name="search" placeholder="Search" class="search_input" >
+          <iframe style="height: 26rem;" class="app-iframe" src="./iframe-pages/contacts_list.html"></iframe>
+        </div>
+        <div class='messages-container'>
+          <iframe style="width: 29rem; height: 25.6rem" class="app-iframe" src="./iframe-pages/messages.html"></iframe>
+          <input type="text" id="input-multiplayer-messenger">
+        </div>
       </div>
     </div>
     <div class="app__window--medium--vertical" id="contacts">
