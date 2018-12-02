@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+#map { 
+    position: relative;
+    height: 100vh; 
+    width: 100vw;
+    top: -17%;
+    z-index: 1;
+    color: $bg-default-0-8 !important;
+    .leaflet-left .leaflet-control {
+        margin-top: 55rem !important;
+        margin-left: 1rem !important;
+    }
+    .leaflet-container {
+        color: $bg-default-0-8;
+    }
+}

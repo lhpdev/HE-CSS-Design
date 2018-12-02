@@ -54,12 +54,17 @@ var npcMessengerApplicationCloseButton = document.querySelector('#npc-messenger 
 var multiplayerMessengerApplication = document.querySelector('#multiplayer-messenger');
 var multiplayerMessengerApplicationCloseButton = document.querySelector('#multiplayer-messenger .app__top-bar__button--close');
 
+//browser 
+var browserApplication = document.querySelector('#browser');
+var browserApplicationCloseButton = document.querySelector('#browser .app__top-bar__button--close');
+
 //BottomMenu
 var terminalIconOne = document.querySelector("#one");
 var terminalIconTwo = document.querySelector("#two");
 var terminalIconThree = document.querySelector("#three");
 var terminalIconFour = document.querySelector("#four");
 var terminalIconFive = document.querySelector("#five");
+var terminalIconSix = document.querySelector("#six");
 
 //URL background paths:
 
@@ -88,6 +93,7 @@ var terminalIconTwo_clicked = false;
 var terminalIconThree_clicked = false;
 var terminalIconFour_clicked = false;
 var terminalIconFive_clicked = false;
+var terminalIconSix_clicked = false;
 
 var notificationsIcon_clicked = false;
 var notificationPoolOpen = false;
@@ -97,6 +103,7 @@ var databaseApplicationOpen = false;
 var contactsApplicationOpen = false;
 var npcMessengerApplicationOpen = false;
 var multiplayerMessengerApplicationOpen = false;
+var browserApplicationOpen = false;
 
 notificationsPool.style.visibility = 'hidden';
 logViewerApplication.style.visibility = 'hidden';
@@ -104,6 +111,7 @@ databaseApplication.style.visibility = 'hidden';
 contactsApplication.style.visibility = 'hidden';
 npcMessengerApplication.style.visibility = 'hidden';
 multiplayerMessengerApplication.style.visibility = 'hidden';
+browserApplication.visibility = 'hidden';
 
 var current_date = Date();
 
@@ -417,6 +425,25 @@ function checkTime(i) {
         }
     });
 
+    terminalIconSix.addEventListener("click", function() {
+        terminalIconSix_clicked = !terminalIconSix_clicked;
+        if (terminalIconSix_clicked) {
+            terminalIconSix.style.background = terminalIcon_active_path;
+            terminalIconSix.style.backgroundRepeat = "no-repeat";
+            terminalIconSix.style.width = "3rem";
+            terminalIconSix.style.height = "3rem";
+            browserApplication.style.visibility = "visible";
+            browserApplicationOpen = true;
+        }else {
+            terminalIconSix.style.background = terminalIcon_inactive_path;
+            terminalIconSix.style.backgroundRepeat = "no-repeat";
+            terminalIconSix.style.width = "3rem";
+            terminalIconSix.style.height = "3rem";
+            browserApplication.style.visibility = "hidden";
+            browserApplicationOpen = false;
+        }
+    });
+
     //LogViewer
     logViewerApplicationCloseButton.addEventListener("click", function() {
         logViewerApplicationOpen = !logViewerApplicationOpen;
@@ -446,18 +473,18 @@ function checkTime(i) {
         terminalIconFour.style.backgroundRepeat = "no-repeat";
     });
 
-    npcMessengerApplicationCloseButton.addEventListener("click", function() {
-        npcMessengerApplicationOpen = !npcMessengerApplicationOpen;
-        npcMessengerApplication.style.visibility = "hidden";
-        terminalIconFour.style.background = terminalIcon_inactive_path;
-        terminalIconFour.style.backgroundRepeat = "no-repeat";
-    });
-
     multiplayerMessengerApplicationCloseButton.addEventListener("click", function() {
         multiplayerMessengerApplicationOpen = !multiplayerMessengerApplicationOpen;
         multiplayerMessengerApplication.style.visibility = "hidden";
         terminalIconFive.style.background = terminalIcon_inactive_path;
         terminalIconFive.style.backgroundRepeat = "no-repeat";
+    });
+
+    browserApplicationCloseButton.addEventListener("click", function() {
+        browserApplicationOpen = !browserApplicationOpen;
+        browserApplication.style.visibility = "hidden";
+        terminalIconSix.style.background = terminalIcon_inactive_path;
+        terminalIconSix.style.backgroundRepeat = "no-repeat";
     });
 
     terminalIconOne.addEventListener("mouseover", function() {
@@ -478,6 +505,10 @@ function checkTime(i) {
 
     terminalIconFive.addEventListener("mouseover", function() {
         terminalIconFive.style.opacity = 0.9;
+    });
+
+    terminalIconSix.addEventListener("mouseover", function() {
+        terminalIconSix.style.opacity = 0.9;
     });
 
     terminalIconOne.addEventListener("mouseout", function() {
@@ -510,6 +541,12 @@ function checkTime(i) {
         }
     });
 
+    terminalIconSix.addEventListener("mouseout", function() {
+        if (!terminalIconSix_clicked) {
+            terminalIconSix.style.opacity = 0.7;
+        }
+    });
+
     const logviewer = "logviewer";
     dragElement(document.getElementById(logviewer));
 
@@ -524,6 +561,9 @@ function checkTime(i) {
 
     const multiplayerMessenger = "multiplayer-messenger";
     dragElement(document.getElementById(multiplayerMessenger));
+
+    const browser = "browser";
+    dragElement(document.getElementById(browser));
 
     //RightPanel
     notificationsGlobalIcon.addEventListener("click", function() {

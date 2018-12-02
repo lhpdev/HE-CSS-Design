@@ -1,0 +1,26 @@
+#home-panel-left {
+  position: fixed;
+  top: 2px;
+  left: 2px;
+}
+
+#home-panel-right {
+	position: fixed;
+	top: 2px;
+	right: 2px;
+}
+
+#home-login {
+}
+
+.login-form {
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+  
+
+/*# sourceMappingURL=integration.scss.map */

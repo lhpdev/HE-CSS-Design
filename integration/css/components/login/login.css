@@ -1,0 +1,44 @@
+.screen--login {
+  height: 100vh;
+  background-image: url("../public/images/login-bg.png");
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 20% 30% 30% 20%;
+  grid-template-rows: [row-1-start] 10rem [row-1-end row-2-start] 1fr [row-2-end row-3-start] 8rem [row-3-end];
+  grid-template-areas: "left-bar .  . right-bar" ". login login ." ". . . .";
+}
+
+.left-panel-section {
+  grid-area: left-bar;
+}
+
+.right-panel-section {
+  grid-area: right-bar;
+}
+
+.login-section {
+  grid-area: login;
+  align-self: center;
+  justify-self: center;
+}
+
+#login-window {
+  color: rgba(155, 243, 255, 0.781);
+  font-size: 11pt;
+  background: rgba(23, 196, 230, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#login-window up p {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.settings-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/*# sourceMappingURL=login.css.map */

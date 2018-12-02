@@ -1,0 +1,148 @@
+.screen--setup {
+  height: 100vh;
+  background-image: url("../public/images/login-bg.png");
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 20% 30% 30% 20%;
+  grid-template-rows: [row-1-start] 10rem [row-1-end row-2-start] 1fr [row-2-end row-3-start] 8rem [row-3-end];
+  grid-template-areas: "left-bar .  . right-bar" ". setup setup ." ". . . .";
+}
+.screen--setup label {
+  letter-spacing: 1px;
+}
+
+.left-panel-section {
+  grid-area: left-bar;
+}
+
+.right-panel-section {
+  grid-area: right-bar;
+}
+
+.setup-section {
+  grid-area: setup;
+  align-self: center;
+  justify-self: center;
+  width: 40rem;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.back-button {
+  visibility: hidden;
+}
+
+.content {
+  color: rgba(155, 243, 255, 0.781);
+  font-size: 11pt;
+  background: rgba(23, 196, 230, 0.1);
+  grid-area: setup-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.content p {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.content .title {
+  margin-left: 0;
+  width: 100%;
+  height: 20%;
+  text-align: left;
+  color: rgba(96, 250, 255, 0.993);
+}
+.content .title p {
+  font-weight: bold;
+  font-size: 13pt;
+  opacity: 0.5;
+  padding: 0;
+  margin: 0;
+}
+.content button {
+  color: rgba(255, 255, 255, 0.781);
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.2rem;
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  background: rgba(23, 196, 230, 0.3);
+}
+.content button:hover {
+  background: rgba(23, 196, 230, 0.7);
+  box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.507);
+  cursor: pointer;
+}
+.content button:active {
+  background: rgba(23, 196, 230, 0.5);
+}
+
+.header {
+  width: 100%;
+}
+.header label {
+  font-weight: lighter;
+  font-size: 18pt;
+}
+
+.options {
+  width: 100%;
+  height: 75%;
+}
+.options p {
+  font-size: 15pt;
+}
+
+.option {
+  color: #a8a8a8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 2rem;
+}
+
+.setup-checkboxes {
+  margin-top: 3rem;
+  width: 100%;
+  height: 80%;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: space-between;
+}
+
+.step_one {
+  visibility: visible;
+  display: inherit;
+}
+
+.step_two {
+  visibility: hidden;
+  display: none;
+}
+
+.step_three {
+  visibility: hidden;
+  display: none;
+}
+
+.bottom-buttons {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=setup.css.map */

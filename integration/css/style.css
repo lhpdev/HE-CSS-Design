@@ -1,34 +1,27 @@
-.app__window--large {
+.app__window {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(23, 196, 230, 0.3);
-  height: 31rem;
-  width: 45rem;
   border-left: 1rem solid rgba(23, 196, 230, 0.7);
   border-right: 1rem solid rgba(23, 196, 230, 0.7);
   visibility: visible;
+}
+
+.app__window--large {
+  height: 31rem;
+  width: 45rem;
 }
 
 .app__window--medium {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(23, 196, 230, 0.3);
   height: 22rem;
   width: 35rem;
-  border-left: 1rem solid rgba(23, 196, 230, 0.7);
-  border-right: 1rem solid rgba(23, 196, 230, 0.7);
-  visibility: visible;
 }
 
 .app__window--small {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(23, 196, 230, 0.3);
   height: 17rem;
   width: 25rem;
-  border-left: 1rem solid rgba(23, 196, 230, 0.7);
-  border-right: 1rem solid rgba(23, 196, 230, 0.7);
-  visibility: visible;
 }
 
 .app__window--medium--vertical {
@@ -1161,11 +1154,14 @@
   cursor: pointer;
 }
 
-.form-txt-input {
+.form-input {
+  display: flex;
+  align-items: center;
   background: rgba(255, 255, 255, 0.267);
   padding: 0.5rem;
   margin: 0.5rem;
   border: none;
+  height: 22px;
   width: 12rem;
   text-align: center;
   color: #cfcfcf;
@@ -1173,12 +1169,19 @@
   font-family: inherit;
   font-style: bold;
 }
-.form-txt-input::placeholder {
-  text-align: center;
-  color: black;
-}
-.form-txt-input:hover {
+.form-input:hover {
   background: rgba(187, 187, 187, 0.267);
+}
+
+.login-form input[type=text], .login-form input[type=password] {
+  border: none;
+  background: unset;
+  height: 25px;
+}
+.login-form input[type=text]::placeholder, .login-form input[type=password]::placeholder {
+  padding-left: 5px;
+  text-align: left;
+  color: black;
 }
 
 .reply-message-container {
@@ -1423,12 +1426,11 @@ body {
 
 .screen--login {
   height: 100vh;
-  background-image: url("../public/images/login-bg.png");
+  background-image: url("../../public/images/login-bg.png");
   background-repeat: no-repeat;
-  display: grid;
-  grid-template-columns: 20% 30% 30% 20%;
-  grid-template-rows: [row-1-start] 10rem [row-1-end row-2-start] 1fr [row-2-end row-3-start] 8rem [row-3-end];
-  grid-template-areas: "left-bar .  . right-bar" ". login login ." ". . . .";
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .left-panel-section {
@@ -1944,6 +1946,26 @@ body {
   color: rgba(23, 196, 230, 0.7);
 }
 
+#home-panel-left {
+  position: fixed;
+  top: 2px;
+  left: 2px;
+}
+
+#home-panel-right {
+  position: fixed;
+  top: 2px;
+  right: 2px;
+}
+
+.login-form section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=integration.scss.map */
 body {
   font-family: "IBM Plex Mono", monospace;
   margin: 0;

@@ -1,0 +1,44 @@
+@import "../../_variables.scss";
+
+.screen--login {
+  height: 100vh;
+  background-image: url("../../public/images/login-bg.png");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-panel-section {
+  grid-area: left-bar;
+}
+
+.right-panel-section {
+  grid-area: right-bar;
+}  
+
+.login-section {
+  grid-area: login;
+  align-self: center;
+  justify-self: center;
+}
+
+#login-window {
+  color: rgba(155, 243, 255, 0.781);
+  font-size: 11pt;
+  background: $bg-default-0-1;
+  // grid-area: login-content;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;up
+  p {
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+}
+
+.settings-icon {
+  width: 2rem;
+  height: 2rem;
+}

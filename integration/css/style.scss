@@ -1,0 +1,29 @@
+@import "./components/application/application.scss";
+@import "./components/boot/boot.scss";
+@import "./components/bottom-menu/bottom-menu.scss";
+@import "./components/buttons/buttons.scss";
+@import "./components/conky/conky.scss";
+@import "./components/dashboard/dashboard.scss";
+@import "./components/form_components/form_components.scss";
+@import "./components/header/header.scss";
+@import "./components/inputs/inputs.scss";
+@import "./components/left-panel/left-panel.scss";
+@import "./components/loader/loader.scss";
+@import "./components/log_viewer/logviewer.scss";
+@import "./components/login/login.scss";
+@import "./components/map/map.scss";
+@import "./components/notifications/notifications.scss";
+@import "./components/right-panel/right-panel.scss";
+@import "./components/setup/setup.scss";
+@import "./components/text/text.scss";
+@import "./components/messages/messages.scss";
+@import "./components/integration/integration.scss";
+@import "_variables.scss";
+
+body {
+	font-family: $font-stack;
+	margin: 0;
+	min-width: 85rem;
+	max-width: 120rem;
+	background: black;
+}

@@ -1,0 +1,175 @@
+@import "../../variables.scss";
+
+.app__window {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $bg-default-0-2;
+	border-left: 1rem solid $bg-default-0-6;
+	border-right: 1rem solid $bg-default-0-6;
+	visibility: visible;
+}
+
+.app__window--large {
+	height: 31rem;
+ 	width: 45rem;
+}
+
+.app__window--medium {
+	height: 22rem;
+	width: 35rem;
+}
+
+.app__window--small {
+	height: 17rem;
+	width: 25rem;
+}
+
+.app__window--medium--vertical {
+	display: flex;
+	flex-direction: column;
+	background-color: $bg-default-0-2;
+	height: 26rem;
+	width: 16rem;
+	border-top: 1rem solid $bg-default-0-6;
+	border-bottom: 1rem solid $bg-default-0-6;
+	visibility: visible;
+}
+
+.app__header {
+	display: flex;
+	justify-content: space-between;
+	height: 1.8rem;
+	margin-left: 4px;
+	margin-right: 4px;
+	padding-bottom: 3px;
+	border-bottom: 2px solid $bg-default-0-6;
+}
+
+.app__header--left,
+.app__header--right {
+	display: flex;
+	align-items: flex-end;
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+.app__icon {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.app__content {
+	height: 100%;
+}
+
+.feature__search-filtered {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 0.5rem;
+	margin-top: 0.3rem;
+	margin-bottom: 0.3rem;
+}
+
+.filter_option {
+	width: 2rem;
+	height: 2rem;
+	margin-right: 0.2rem;
+	&:hover {
+		background: $bg-default-0-2;
+		cursor: pointer;
+	}
+}
+
+.search_input {
+	-webkit-appearance: none;
+	font-family: inherit;
+	background: $default-input-color;
+	width: 11rem;
+	height: 1.8rem;
+	color: white;
+	border: none;
+	text-align: left;
+	padding-left: 1rem;
+	&::placeholder {
+			color: black;
+			font-size: 12pt;
+	}
+}
+
+.app__tabs {
+	display: flex;
+	justify-content: flex-start;
+	height: 2rem;
+	align-items: center;
+	margin-left: 0.5rem;
+}
+
+.app-iframe {
+	margin-top: 0.5rem;
+	margin-bottom: 0.35rem;
+	border: none;
+	opacity: 0.7;
+	height: 23rem;
+	width: 100%;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.app__list {
+    width: 42rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.app__active-ip {
+	position: relative;
+	top: -2px;
+	margin-left: 0.4rem;
+	background: rgba(255, 255, 255, 0.253);
+	border: 1px solid rgba(255, 255, 255, 0.473);
+    font-size: 10pt;
+    width: 6rem;
+    text-align: center;
+    color: rgb(231, 231, 231);
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 8px;
+	display: hidden;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgba(9, 164, 175, 0.918);
+}
+
+::-webkit-scrollbar-track:hover {
+    background: rgba(4, 116, 124, 0.918);
+	display: initial;
+}
+    
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(250, 170, 21);
+    cursor: context-menu;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(160, 104, 1);
+	cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgb(119, 78, 2);
+    cursor: pointer;
+}

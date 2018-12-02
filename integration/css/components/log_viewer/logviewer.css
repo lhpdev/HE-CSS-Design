@@ -1,0 +1,64 @@
+body {
+  font-family: "IBM Plex Mono", monospace;
+  min-width: unset !important;
+  max-width: 50rem;
+  margin: 0;
+  background: rgba(2, 52, 56, 0.918);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 10pt;
+}
+
+.logviewer__item {
+  margin-top: 0.5rem;
+  padding-top: 0.2rem;
+  background: rgba(0, 0, 0, 0.363);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: solid rgba(9, 164, 175, 0.918) 0.15rem;
+}
+
+.logviewer-timestamp {
+  opacity: 0.5;
+  height: 1rem;
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+  font-size: 8pt;
+}
+
+.logviewer-message_content {
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.logviewer-message {
+  width: 90%;
+  display: flex;
+  padding-left: 0.3rem;
+}
+
+.logviewer-message p {
+  padding-left: 0.2rem;
+}
+
+.ip-source {
+  color: rgba(9, 164, 175, 0.918);
+  font-weight: bold;
+}
+
+.endpoint {
+  font-weight: bold;
+  color: orange;
+}
+
+.extend-button {
+  width: 10%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=logviewer.css.map */
