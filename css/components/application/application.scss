@@ -1,56 +1,72 @@
 @import "../../variables.scss";
 
+/* This file will also contain a simple guideline and improvised css guideline for future development and maintenance */
+
+/* For more info please check this amazing guideline: https://cssguidelin.es/ .
+
+/*** Basically all the css classes should split their rules by 'Positioning', 'Display and Box Model' and /* Other. ****
+
+**** Additionally, for the 'Positioning' and 'Display and Box Model', rules can be ordered by its connection. For the 'Other' section, all rules should be alphabetically ordered. ****/
+
+/* Example: */
+
 .app__window--large {
- display: flex;
- flex-direction: column;
- background-color: $bg-default-0-2;
- height: 31rem;
- width: 45rem;
- border-left: 1rem solid $bg-default-0-6;
- border-right: 1rem solid $bg-default-0-6;
- visibility: visible;
+	/* Positioning */
+		/* none is this case */
+  /* Display & Box Model */
+	display: flex;
+	flex-direction: column;
+	visibility: 	 visible;
+	height: 31rem;
+	width:  45rem;
+	/* Other */
+	background-color: $bg-default-0-2;
 }
 
 .app__window--medium {
 	display: flex;
 	flex-direction: column;
-	background-color: $bg-default-0-2;
+	visibility: 	 visible;
 	height: 22rem;
-	width: 35rem;
-	border-left: 1rem solid $bg-default-0-6;
+	width:  35rem;
+	border-left:  1rem solid $bg-default-0-6;
 	border-right: 1rem solid $bg-default-0-6;
-	visibility: visible;
-   }
+
+	background-color: $bg-default-0-2;
+}
 
 .app__window--small {
 	display: flex;
 	flex-direction: column;
-	background-color: $bg-default-0-2;
+	visibility: 	 visible;
 	height: 17rem;
-	width: 25rem;
-	border-left: 1rem solid $bg-default-0-6;
+	width:  25rem;
+	border-left:  1rem solid $bg-default-0-6;
 	border-right: 1rem solid $bg-default-0-6;
-	visibility: visible;
+
+	background-color: $bg-default-0-2;
 }
 
 .app__window--medium--vertical {
 	display: flex;
 	flex-direction: column;
-	background-color: $bg-default-0-2;
+	visibility: 	 visible;
 	height: 26rem;
-	width: 16rem;
-	border-top: 1rem solid $bg-default-0-6;
+	width:  16rem;
+	border-top: 	 1rem solid $bg-default-0-6;
 	border-bottom: 1rem solid $bg-default-0-6;
-	visibility: visible;
+
+	background-color: $bg-default-0-2;
 }
 
 .app__header {
 	display: flex;
 	justify-content: space-between;
 	height: 1.8rem;
-	margin-left: 4px;
+	margin-left:  4px;
 	margin-right: 4px;
 	padding-bottom: 3px;
+
 	border-bottom: 2px solid $bg-default-0-6;
 }
 
@@ -59,13 +75,13 @@
 	display: flex;
 	align-items: flex-end;
 	h3 {
-		margin-top: 0;
+		margin-top:    0;
 		margin-bottom: 0;
 	}
 }
 
 .app__icon {
-	width: 1.5rem;
+	width:  1.5rem;
 	height: 1.5rem;
 }
 
@@ -76,13 +92,13 @@
 .feature__search-filtered {
 	display: flex;
 	justify-content: flex-end;
-	margin-right: 0.5rem;
-	margin-top: 0.3rem;
+	margin-right:  0.5rem;
+	margin-top:    0.3rem;
 	margin-bottom: 0.3rem;
 }
 
 .filter_option {
-	width: 2rem;
+	width:  2rem;
 	height: 2rem;
 	margin-right: 0.2rem;
 	&:hover {
@@ -92,15 +108,16 @@
 }
 
 .search_input {
-	-webkit-appearance: none;
-	font-family: inherit;
-	background: $default-input-color;
-	width: 11rem;
+	width:  11rem;
 	height: 1.8rem;
-	color: white;
 	border: none;
-	text-align: left;
 	padding-left: 1rem;
+
+	background: $default-input-color;
+	color: white;
+	font-family: inherit;
+	text-align: left;
+	-webkit-appearance: none;
 	&::placeholder {
 			color: black;
 			font-size: 12pt;
@@ -116,36 +133,39 @@
 }
 
 .app-iframe {
-	margin-top: 0.5rem;
+	display: flex;
+	align-items:	   center;
+	justify-content: center;
+	height: 23rem;
+	width:   100%;
+	margin-top: 		0.5rem;
 	margin-bottom: 0.35rem;
 	border: none;
 	opacity: 0.7;
-	height: 23rem;
-	width: 100%;
+
 	background: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .app__list {
-    width: 42rem;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+	display: flex;
+	flex-direction: column;
+	align-self: 					 center;
+	justify-content: space-around;
+	width: 42rem;
 }
 
 .app__active-ip {
 	position: relative;
 	top: -2px;
+
+	width: 6rem;
 	margin-left: 0.4rem;
-	background: rgba(255, 255, 255, 0.253);
 	border: 1px solid rgba(255, 255, 255, 0.473);
-    font-size: 10pt;
-    width: 6rem;
-    text-align: center;
-    color: rgb(231, 231, 231);
+
+	background: rgba(255, 255, 255, 0.253);
+	color: rgb(231, 231, 231);
+	font-size: 10pt;
+	text-align: center;
 }
 
 /* width */
@@ -160,23 +180,23 @@
 }
 
 ::-webkit-scrollbar-track:hover {
-    background: rgba(4, 116, 124, 0.918);
+  background: rgba(4, 116, 124, 0.918);
 	display: initial;
 }
     
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(250, 170, 21);
-    cursor: context-menu;
+	background: rgb(250, 170, 21);
+	cursor: context-menu;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(160, 104, 1);
+  background: rgb(160, 104, 1);
 	cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: rgb(119, 78, 2);
-    cursor: pointer;
+	background: rgb(119, 78, 2);
+	cursor: pointer;
 }
